@@ -1,50 +1,94 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const Autoprefixer = require("autoprefixer");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-module.exports = {
-  entry: "./src/index.js",
-  output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
-  },
-  module: {
-    rules: [
-      {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader"],
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ["file-loader"],
-      },
-      {
-        test: /\.pug$/,
-        loaders: [
-          {
-            loader: "html-loader",
+module.exports = (env, options) => {
+  const isProduction = options.mode === "production";
+  const publicDir = isProduction ? "https://github-pages-here/" : "/";
+
+  return {
+    entry: `${path.join(__dirname, "./src")}/js`,
+    output: {
+      filename: "js/[name].[hash].js",
+      path: path.join(__dirname, "./dist"),
+      publicPath: publicDir,
+    },
+    module: {
+      rules: [
+        {
+          test: /\.scss$/,
+          use: [
+            "style-loader",
+            "css-loader",
+            {
+              loader: "sass-loader",
+              options: {
+                sourceMap: true,
+                data: "@import './src/styles/variables';",
+                includePaths: [path.join(__dirname, "src")],
+              },
+            },
+          ],
+        },
+        {
+          test: /\.(png|svg|jpg|gif)$/,
+          loader: "file-loader",
+          exclude: [/fonts/, /static/],
+          options: {
+            name: "./img/[name].[ext]",
+            publicPath: "../",
           },
-          {
-            loader: "pug-html-loader",
+        },
+        {
+          test: /\.(woff|woff2|eot|ttf|otf)$/,
+          exclude: [/blocks/, /img/],
+          use: {
+            loader: "file-loader",
             options: {
-              pretty: true,
+              name: "./fonts/[name].[ext]",
+              publicPath: "../",
             },
           },
-        ],
+        },
+        {
+          test: /\.pug$/,
+          loaders: [
+            {
+              loader: "html-loader",
+            },
+            {
+              loader: "pug-html-loader",
+              options: {
+                pretty: true,
+              },
+            },
+          ],
+        },
+      ],
+    },
+    devServer: {
+      contentBase: "./dist",
+      port: 3000,
+      overlay: {
+        warnings: true,
+        errors: true,
       },
+      watchOptions: {
+        ignored: /node_modules/,
+      },
+    },
+    plugins: [
+      Autoprefixer,
+
+      new MiniCssExtractPlugin({
+        filename: "./css/[name].[hash].css",
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: "index.html",
+        template: "./src/pages/index.pug",
+      }),
     ],
-  },
-  devServer: {  // configuration for webpack-dev-server
-      contentBase: './dist',  //source of static assets
-      port: 3000, // port to run dev-server
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: "./src/index.pug",
-    }),
-  ],
+  };
 };

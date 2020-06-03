@@ -1,0 +1,53 @@
+.icons {
+  direction: ltr;
+  display: inline-block;
+  font-family: "Material Icons";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: normal;
+  letter-spacing: normal;
+  user-select: none;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  word-wrap: normal;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &_color {
+    &_dark-shade {
+      color: $dark-shade;
+    }
+
+    &_shade {
+      color: $main-shade;
+    }
+
+    &_light-shade {
+      color: $light-shade;
+    }
+
+    &_purple-gradient {
+      background: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
+      -webkit-text-fill-color: transparent;
+    }
+
+    &_purple {
+      color: $purple;
+    }
+
+    &_white {
+      color: #fff;
+    }
+  }
+
+  &_size {
+    &_large {
+      font-size: 48px;
+    }
+
+    &_small {
+      font-size: 10px;
+    }
+  }
+}

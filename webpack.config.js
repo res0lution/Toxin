@@ -17,22 +17,28 @@ module.exports = (env, options) => {
     module: {
       rules: [
         {
-          test: /\.scss$/,
+          test: /\.(sa|sc|c)ss$/,
           use: [
-            "style-loader",
-            "css-loader",
+            {
+              loader: MiniCssExtractPlugin.loader,
+            },
+            {
+              loader: "css-loader",
+            },
             {
               loader: "sass-loader",
               options: {
                 sourceMap: true,
-                data: "@import './src/styles/variables';",
-                includePaths: [path.join(__dirname, "src")],
+                prependData: "@import './src/sass/variables';",
+                sassOptions: {
+                  includePaths: [path.join(__dirname, "src")],
+                },
               },
             },
           ],
         },
         {
-          test: /\.(png|svg|jpg|gif)$/,
+          test: /\.(png|jpg|gif|svg)$/,
           loader: "file-loader",
           exclude: [/fonts/, /static/],
           options: {
@@ -41,8 +47,8 @@ module.exports = (env, options) => {
           },
         },
         {
-          test: /\.(woff|woff2|eot|ttf|otf)$/,
-          exclude: [/blocks/, /img/],
+          test: /\.(eot|svg|ttf|woff|woff2)$/,
+          exclude: [/blocks/, /img/, /static/],
           use: {
             loader: "file-loader",
             options: {
@@ -78,6 +84,7 @@ module.exports = (env, options) => {
         ignored: /node_modules/,
       },
     },
+    devtool: isProduction ? false : "eval-sourcemap",
     plugins: [
       Autoprefixer,
 

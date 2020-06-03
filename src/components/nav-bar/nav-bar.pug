@@ -1,0 +1,37 @@
+include ../logo/logo.pug
+include ../button/button.pug
+include ../icons/icons.pug
+include ../links-list/links-list.pug
+
+mixin nav-bar({ isLoggedIn = true, userName = "Cosmin Negoita", links = [], loginButtonText = "Login", registerButtonText = "Register", gapBetweenElements, } = {})
+  - let gapModifier
+
+  case indentBetweenElements
+    when "large"
+      - gapModifier = "nav-bar__list_indent_large"
+
+
+  header.nav-bar
+    nav.nav-bar__inner
+      +logo()
+      .nav-bar__menu
+        .nav-bar__list(class=gapModifier)
+          +links-list({ links, gapBetweenElements, })
+        if !isLoggedIn
+          .nav-bar__login
+            +button({
+              styleType: "faint", 
+              href: "/address/need/change", 
+              text: loginButtonText, 
+              size: "narrow",
+            })
+          .nav-bar__register
+            +button({
+              styleType: "simple", 
+              href: "/address/need/change", 
+              text: registerButtonText, 
+              size: "narrow",
+            })
+        else
+          .nav-bar__vertical-line
+          .nav-bar__user-name=userName

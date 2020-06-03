@@ -1,0 +1,38 @@
+include ../icons/icons.pug
+
+mixin button({ styleType = "simple", href = "/address/need/change", text = "click me", buttonType, size, } = {})
+  - let isSubmit = false
+  - let sizeModifier
+  - let typeModifier
+  - let tag
+
+  case buttonType
+    when "button"
+      - tag = "button"
+    when "submit"
+      - tag = "button"
+      - typeModifier = "submit"
+      - isSubmit = true
+      - href = null
+    default
+      - tag = "a"
+
+  case size
+    when "small"
+      - sizeModifier = "btn_size_small"
+    when "narrow"
+      - sizeModifier = "btn_size_narrow"
+
+  case styleType
+    when "faint"
+      .btn.btn_faint(class=sizeModifier)
+        #{tag}(class="btn__key" type=typeModifier href=href)=text
+    when "long"
+      #{tag}(class="btn btn_long" class=sizeModifier type=typeModifier href=href)=text
+        .btn__arrow
+          +icons({
+            type: "arrow_forward", 
+            color: "white",
+          })
+    default
+      #{tag}(class=`btn btn_${styleType}` class=sizeModifier type=typeModifier href=href)=text

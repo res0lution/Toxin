@@ -1,0 +1,91 @@
+$column-max-width: 780px;
+
+.nav-bar {
+  background: #ffffff;
+  box-shadow: 0px 10px 20px $the-lightest-shade;
+
+  @media (max-width: $column-max-width) {
+    flex-direction: column;
+  }
+
+  &__inner {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1160px;
+    width: 100%;
+
+    @media (max-width: 1168px) {
+      max-width: 1160px;
+      width: auto;
+    }
+
+    @media (max-width: $column-max-width) {
+      flex-direction: column;
+      padding: 0.625rem 0;
+    }
+  }
+
+  &__login {
+    margin-right: 1.8rem;
+
+    @media (max-width: $column-max-width) {
+      margin-right: 0;
+      margin-top: 0.3rem;
+    }
+  }
+
+  &__menu {
+    align-items: center;
+    display: flex;
+
+    @media (max-width: $column-max-width) {
+      flex-direction: column;
+    }
+  }
+
+  &__list {
+    margin-right: 1.8rem;
+
+    &_indent {
+      &_large {
+        margin-right: 1.875rem;
+      }
+    }
+
+    @media (max-width: $column-max-width) {
+      margin-right: 0;
+    }
+  }
+
+  &__register {
+    margin-right: 0.15rem;
+
+    @media (max-width: $column-max-width) {
+      margin-top: 0.3rem;
+    }
+  }
+
+  &__user-name {
+    color: $main-shade;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: $main-font-size;
+    margin-left: 1.875rem;
+
+    @media (max-width: $column-max-width) {
+      margin-left: 0;
+      margin-top: 0.625rem;
+    }
+  }
+
+  &__vertical-line {
+    background: $light-shade;
+    height: 30px;
+    width: 1px;
+
+    @media (max-width: 760px) {
+      margin: 5px 0;
+    }
+  }
+}

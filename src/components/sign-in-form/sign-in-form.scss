@@ -23,14 +23,14 @@
   }
 
   &__button {
-    margin-top: 1.125rem;
+    margin-top: 1.3rem;
   }
 
   &__login {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin-top: 1.875rem;
+    margin-top: 1.91rem;
   }
 
   &__login-text {
@@ -38,8 +38,8 @@
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: $main-font-size;
-    line-height: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.6rem;
   }
 
   @media (max-width: 380px) {

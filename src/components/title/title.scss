@@ -6,8 +6,8 @@
 
   &_type {
     &_h1 {
-      font-size: 1.5rem;
-      line-height: 1.875rem;
+      font-size: 1.8rem;
+      line-height: 2.35rem;
     }
 
     &_h2 {
@@ -16,7 +16,7 @@
 
     &_h3 {
       font-family: "Montserrat", Arial, sans-serif;
-      font-size: 0.75rem;
+      font-size: $main-font-size;
       text-transform: uppercase;
     }
   }

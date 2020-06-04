@@ -1,0 +1,11 @@
+.social-media {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 112px;
+
+  &__img {
+    height: 100%;
+    width: 100%;
+  }
+}

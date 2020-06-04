@@ -1,0 +1,35 @@
+include ../subscription-input/subscription-input.pug
+include ../logo/logo.pug
+include ../copyright/copyright.pug
+include ../vertical-menu/vertical-menu.pug
+include ../title/title.pug
+
+mixin footer({ description = "Description", titleOfBlockSubscribe = "Subscribe", descriptionOfBlockSubscribe = "Sub descr", emailInputPlaceholder = "Email", textOfCopyrightBlock  = "copyright", menus = [], } = {} ) 
+  footer.footer
+    .footer__container
+      .footer__inner
+        ul.footer__list
+          li.footer__item
+            .footer__logo
+              +logo()
+          li.footer__item
+            p.footer__description=description
+        
+        .footer__menu
+          each menu in menus
+            - const { title, links, } = menu
+            +vertical-menu({ 
+              links,
+              title: title, 
+            })
+
+        ul.footer__list
+          li.footer__item
+            +title({ type: "h3", text: titleOfBlockSubscribe, })
+          li.footer__item
+            p.footer__description=descriptionOfBlockSubscribe
+          li.footer__item
+            .footer__subscription-input
+              +subscription-input({ placeholder: emailInputPlaceholder, })
+    section.footer__copyright     
+      +copyright({ text: textOfCopyrightBlock, })

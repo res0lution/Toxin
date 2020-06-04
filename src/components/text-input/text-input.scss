@@ -1,0 +1,68 @@
+.text-input {
+  background: #FFF;
+  border: 1px solid $light-shade;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: $light-shade;
+  display: inline-block;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 42px;
+  max-width: 320px;
+  padding-left: 15px;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  text-overflow: ellipsis;
+  width: 100%;
+
+  &:focus, 
+  &:hover {
+    color: $dark-shade;
+    border: 1px solid $main-shade;
+    outline: none;
+    transition-duration: 3s;
+  }
+
+  &::placeholder {
+    color: $light-shade;
+  }
+
+  &_masked {
+    &:focus, 
+    &:hover {
+      color: $dark-shade;
+      border: 1px solid $main-shade;
+      outline: none;
+      transition-duration: 3s;
+    }
+  
+    &::placeholder {
+      color: $light-shade;
+    }
+  }
+
+  &_theme {
+    &_dark {
+      color: $dark-shade;
+    
+      &::placeholder {
+        color: $dark-shade;
+      }
+    
+      &:focus, 
+      &:hover {
+        border: 1px solid $light-shade;
+        transition-duration: 3s;
+      }
+    }
+  }
+
+  &_clickable {
+    cursor: pointer;
+  }
+
+  &_with-padding-on-right {
+    padding-right: 38px;
+  }
+}

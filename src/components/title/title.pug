@@ -1,0 +1,13 @@
+mixin title({ type = "h3", text = "Header", weight, color, } = {})
+  - let weightModifier = ""
+  - let colorModifier = ""
+  
+  case color
+    when "light shade"
+      - colorModifier = " title_color_light-shade"
+
+  case weight
+    when "normal"
+      - weightModifier = " title_weight_normal"
+
+  #{type}.title(class = `title_type_${type}${colorModifier}${weightModifier}`)=text

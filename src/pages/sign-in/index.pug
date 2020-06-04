@@ -1,0 +1,11 @@
+extends ../index
+
+block variables
+    - let pageTitle = "Sign in"
+
+block content
+    include ../../components/sign-in-form/sign-in-form.pug
+
+    main.sign-in
+      section.sign-in__container
+        +sign-in-form()

@@ -1,0 +1,24 @@
+mixin text-input({ type = "text", name, theme, isMasked, placeholder, disabled = false, readonly = false, isClickable } = {})
+  - let darkThemeModifier = ""
+  - let maskedThemeModifier = ""
+  - let isClickableModifier = ""
+
+  case theme
+    when "dark"
+      - darkThemeModifier = " text-input_theme_dark"
+    
+  if isMasked
+    - maskedThemeModifier = " text-input_masked"
+    - placeholder = "ДД.ММ.ГГГГ"
+
+  if isClickable
+    - isClickableModifier = " text-input_clickable"
+
+  input(
+    type=type
+    name=name
+    class=`text-input js-text-input${darkThemeModifier}${maskedThemeModifier}${isClickableModifier}`
+    placeholder=placeholder
+    disabled=disabled
+    readonly=readonly
+  )

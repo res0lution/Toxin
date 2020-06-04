@@ -1,0 +1,35 @@
+include ../title/title.pug
+include ../text-input/text-input.pug
+include ../button/button.pug
+
+mixin sign-in-form({ action="/address/need/change", name="registration", method="post", } = {})
+  form.sign-in-form(action=action name=name method=method)
+    .sign-in-form__wrapper
+      .sign-in-form__title
+        +title({ type: "h1", text: "Войти", })
+
+      .sign-in-form__email
+        +text-input({
+          type: "email",
+          name: "email",
+          placeholder: "Email",
+        })
+      .sign-in-form__password
+        +text-input({
+          type: "password",
+          name: "password",
+          placeholder: "Пароль",
+        })
+      .sign-in-form__button
+        +button({
+          styleType: "long", 
+          text: "Войти",
+          buttonType: "submit",
+        })
+      .sign-in-form__login
+        p.sign-in-form__login-text Нет аккаунта на Toxin?
+        +button({
+          styleType: "faint", 
+          href:"/address/need/change", 
+          text: "Создать", 
+        })

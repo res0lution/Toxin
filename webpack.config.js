@@ -59,17 +59,7 @@ module.exports = (env, options) => {
         },
         {
           test: /\.pug$/,
-          loaders: [
-            {
-              loader: "html-loader",
-            },
-            {
-              loader: "pug-html-loader",
-              options: {
-                pretty: true,
-              },
-            },
-          ],
+          loader: "pug-loader",
         },
       ],
     },
@@ -94,7 +84,7 @@ module.exports = (env, options) => {
 
       new HtmlWebpackPlugin({
         filename: "index.html",
-        template: "./src/pages/index.pug",
+        template: "./src/pages/sign-in/index.pug",
       }),
     ],
   };

@@ -1,0 +1,25 @@
+.sign-in {
+  align-items: center;
+  background: url("../../img/sign-bcg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
+  display: flex;
+  height: min-content;
+  position: relative;
+  min-height: 683px;
+  width: 100%;
+
+  @media (max-width: 456px) {
+    height: min-content;
+    min-height: 350px;
+  }
+
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+}

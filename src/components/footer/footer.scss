@@ -31,9 +31,9 @@
     color: $dark-shade;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-size: $main-font-size;
+    font-size: 1rem;
     font-weight: normal;
-    line-height: 1.5rem;
+    line-height: 1.7rem;
     max-width: 260px;
     margin: 0;
     text-align: left;
@@ -55,7 +55,7 @@
     flex-direction: row;
     justify-content: space-between;
     max-width: 1160px;
-    margin: 6.25rem 0.625rem;
+    margin: 7.3rem 0.625rem 7.15rem 0.625rem;
     width: 100%;
 
     @media (max-width: 768px) {
@@ -108,7 +108,7 @@
 
     @media (max-width: 768px) {
       align-items: center;
-      padding-bottom: 10px;
+      padding-bottom: 0.625rem;
     }
   }
 
@@ -119,9 +119,8 @@
   &__menu {
     display: flex;
     justify-content: space-around;
-    margin-top: 0.25rem;
-    padding-right: 1.5rem;
-    padding-left: 0.625rem;
+    margin: 0.25rem auto 0 auto;
+    padding-right: 1rem;
     width: 100%;
 
     @media (max-width: 370px) {
@@ -135,7 +134,11 @@
   }
 
   &__subscription {
-    margin-top: 0.25rem;
+    margin-top: 0.2rem;
+  }
+
+  &__subscription-input {
+    margin-top: 0.6rem;
   }
 
   &__copyright {

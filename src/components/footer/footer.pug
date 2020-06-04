@@ -17,13 +17,14 @@ mixin footer({ description = "Description", titleOfBlockSubscribe = "Subscribe",
         
         .footer__menu
           each menu in menus
-            - const { title, links, } = menu
+            - const { title, links, extraModifier } = menu
             +vertical-menu({ 
               links,
               title: title, 
+              extraModifier
             })
 
-        ul.footer__list
+        ul.footer__list.footer__subscription
           li.footer__item
             +title({ type: "h3", text: titleOfBlockSubscribe, })
           li.footer__item

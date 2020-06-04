@@ -1,8 +1,8 @@
 include ../title/title.pug
 
-mixin vertical-menu({ title = "title", links = [], } = {})
+mixin vertical-menu({ title = "title", links = [], extraModifier="" } = {})
   .vertical-menu
-    ul.vertical-menu__list
+    ul.vertical-menu__list(class=`vertical-menu__list${extraModifier}`)
       li.vertical-menu__item
         +title({ type: "h3", text: title, })
       each link in links

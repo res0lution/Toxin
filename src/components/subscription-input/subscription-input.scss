@@ -2,6 +2,20 @@
   position: relative;
   max-width: 267px;
 
+  &__arrow {
+    align-items: center;
+    bottom: 0;
+    cursor: pointer;
+    display: flex;
+    height: 44px;
+    font-size: 1rem;
+    line-height: 1rem;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    width: 44px;
+  }
+
   &__field {
     background: #fff;
     border: 1px solid $light-shade;
@@ -10,9 +24,9 @@
     color: $light-shade;
     display: inline-block;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: $main-font-size;
+    font-size: 1rem;
     line-height: 42px;
-    padding-left: 0.875rem;
+    padding-left: 1.2rem;
     padding-top: 0;
     padding-bottom: 0;
     position: relative;
@@ -29,19 +43,5 @@
     &::placeholder {
       color: $light-shade;
     }
-  }
-
-  &__arrow {
-    align-items: center;
-    bottom: 0;
-    cursor: pointer;
-    display: flex;
-    height: 44px;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    justify-content: center;
-    position: absolute;
-    right: 0;
-    width: 44px;
   }
 }

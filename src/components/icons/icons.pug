@@ -16,8 +16,8 @@ mixin icons({ type = "Enter symbol text", size, color, } = {})
 
   case size
     when "large"
-      - sizeModifier = "material-icons_size_large"
+      - sizeModifier = "icons_size_large"
     when "small"
-      - sizeModifier = "material-icons_size_small"
+      - sizeModifier = "icons_size_small"
 
   i.icons(class=`${sizeModifier}${colorModifier}`)=type

@@ -8,9 +8,9 @@
     color: $dark-shade;
     cursor: pointer;
     display: inline-block;
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 14px;
-    margin-left: 10px;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 1rem;
+    margin-left: 0.625rem;
     vertical-align: middle;
     white-space: pre-wrap;
   }
@@ -23,8 +23,8 @@
     cursor: pointer;
     display: inline-block;
     height: 20px;
-    padding-right: 3px;
-    padding-left: 3px;
+    padding-right: 0.1875rem;
+    padding-left: 0.1875rem;
     text-align: left;
     vertical-align: middle;
     width: 40px;
@@ -43,14 +43,14 @@
     display: none;
     margin: 0;
     width: 0;
-  
+
     &:checked ~ .toggle-button__slider {
       border: 1px solid $purple;
       text-align: right;
     }
-    
+
     &:checked ~ .toggle-button__slider > .toggle-button__circle {
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     }
   }
 }

@@ -1,0 +1,75 @@
+include ../radio-input/radio-input.pug
+include ../title/title.pug
+include ../text-input/text-input.pug
+include ../toggle-button/toggle-button.pug
+include ../button/button.pug
+
+mixin registration-form( { action="/address/need/change", name="registration-form", method="post", } = {} )
+  form.registration-form(action=action name=name method=method)
+    .registration-form__wrapper
+      .registration-form__title
+        +title({ type: "h1", text: "Регистрация аккаунта", })
+
+      .registration-form__first-name
+        +text-input({
+          type: "text",
+          name: "name",
+          placeholder: "Имя",
+          width: "full",
+        })
+      .registration-form__second-name
+        +text-input({
+          type: "text",
+          name: "second-name",
+          placeholder: "Фамилия",
+          width: "full",
+        })
+
+      .registration-form__radio-inputs
+        .registration-form__radio-input
+          +radio-input({ name:"gender", value:"man", text:"Мужчина", isChecked:"true", })
+        .registration-form__radio-input
+          +radio-input({ name:"gender", value:"woman", text:"Женщина", })
+
+      .registration-form__birthday-title
+        +title({ type: "h3", text: "Дата рождения", })
+      
+      .registration-form__birthday
+        +text-input({
+          placeholder: "ДД.ММ.ГГГГ",
+          isMasked: true,
+        })
+
+      .registration-form__login-data-title
+        +title({ type: "h3", text: "Данные для входа в сервис", })
+
+      .registration-form__email
+        +text-input({
+          type: "email",
+          name: "email",
+          placeholder: "Email",
+        })
+      .registration-form__password
+        +text-input({
+          type: "password",
+          name: "password",
+          placeholder: "Пароль",
+        })
+
+      .registration-form__toggle-button
+        +toggle-button({ name: "toggle", text: "Получать спецпредложения", })
+
+      .registration-form__button
+        +button({
+          styleType: "long", 
+          text: "Перейти к оплате",
+          type: "submit",
+        })   
+
+      .registration-form__login
+        p.registration-form__login-text Уже есть аккаунт на Toxin
+        +button({
+          styleType: "faint", 
+          href:"/address/need/change", 
+          text: "Войти", 
+        })

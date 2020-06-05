@@ -1,0 +1,56 @@
+.toggle-button {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+
+  &__text {
+    color: $dark-shade;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 14px;
+    margin-left: 10px;
+    vertical-align: middle;
+    white-space: pre-wrap;
+  }
+
+  &__slider {
+    border: 1px solid $light-shade;
+    border-radius: 10px;
+    background-color: #fff;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    padding-right: 3px;
+    padding-left: 3px;
+    text-align: left;
+    vertical-align: middle;
+    width: 40px;
+  }
+
+  &__circle {
+    background: $light-shade;
+    border-radius: 50%;
+    display: inline-block;
+    height: 12px;
+    vertical-align: middle;
+    width: 12px;
+  }
+
+  &__input {
+    display: none;
+    margin: 0;
+    width: 0;
+  
+    &:checked ~ .toggle-button__slider {
+      border: 1px solid $purple;
+      text-align: right;
+    }
+    
+    &:checked ~ .toggle-button__slider > .toggle-button__circle {
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+  }
+}

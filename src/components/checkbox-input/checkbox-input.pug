@@ -1,0 +1,12 @@
+mixin checkbox-input({ name = "checkbox-input", text = "check box", description, } = {})
+  - let typeModifier
+
+  if description
+    - typeModifier = "checkbox-input_rich"
+
+  section.checkbox-input(class=typeModifier)
+    label(class="checkbox-input__label")
+      input(type="checkbox" name=name class="checkbox-input__input")
+      span.checkbox-input__flag
+      span.checkbox-input__header-text=text
+      span.checkbox-input__description=description

@@ -1,0 +1,138 @@
+.search-room {
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  width: 100%;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 325px auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "side-bar title" "side-bar elements" "side-bar pagination";
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.875rem 0.625rem 4.75rem 0.625rem;
+    width: min-content;
+
+    @media (min-width: 550px) and (max-width: 1160px) {
+      grid-template-columns: 280px min-content;
+    }
+
+    @media (max-width: 550px) {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: 266px;
+      grid-template-rows: auto auto auto auto auto auto;
+      grid-template-areas: "side-bar" "side-bar" "side-bar" "title" "elements" "pagination";
+    }
+  }
+
+  &__side-bar {
+    grid-area: side-bar;
+  }
+
+  &__side-bar-inner {
+    max-width: 266px;
+  }
+
+  &__dropdown_guests {
+    width: 266px;
+  }
+
+  &__range-slider-description {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 0.875rem;
+    line-height: $main-font-size;
+    color: $main-shade;
+    margin-top: 0.875rem;
+  }
+
+  &__title {
+    grid-area: title;
+  }
+
+  &__elements {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-area: elements;
+    grid-column-gap: 0.75rem;
+    grid-row-gap: 1.25rem;
+    padding-top: 1.25rem;
+
+    @media (max-width: 1112px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      justify-items: center;
+    }
+
+    @media (max-width: 834px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &__pagination {
+    justify-self: center;
+    grid-area: pagination;
+    margin-left: -0.875rem;
+    padding-top: 2.75rem;
+  }
+
+  &__filter-date {
+    margin-top: 0.3125rem;
+  }
+
+  &__dropdown-guests-title {
+    margin-top: 1.25rem;
+  }
+
+  &__dropdown-guests {
+    margin-top: 0.3125rem;
+  }
+
+  &__range-slider {
+    margin-top: 1.875rem;
+  }
+  &__checkbox-inputss-title {
+    margin-top: 1.875rem;
+  }
+
+  &__checkbox-inputss {
+    margin-top: 1rem;
+  }
+
+  &__checkbox-input {
+    margin-top: 0.625rem;
+  }
+
+  &__rich-checkbox-title {
+    margin-top: 1.875rem;
+  }
+
+  &__rich-checkbox {
+    margin-top: 1rem;
+  }
+
+  &__rich-checkbox-second {
+    margin-top: 0.5rem;
+  }
+  &__rich-checkbox-title {
+    margin-top: 1.875rem;
+  }
+
+  &__dropdown-furniture-title {
+    margin-top: 1.875rem;
+  }
+
+  &__dropdown-furniture {
+    margin-top: 0.5rem;
+  }
+
+  &__rich-expandable-checkbox {
+    margin-top: 0.75rem;
+  }
+
+  &__rich-dropdown-checkbox {
+    margin-top: 0.625rem;
+  }
+}

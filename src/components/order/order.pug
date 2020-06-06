@@ -1,0 +1,43 @@
+include ../title/title.pug
+include ../info-table/info-table.pug
+include ../filter-date/filter-date.pug
+include ../dropdown/dropdown.pug
+include ../button/button.pug
+
+mixin order({ name="order", action="/address/need/change", method="get", roomPrice = "9 990", roomNumber = "888", currency = "₽", inTime = "в сутки", typeOfRoom = "люкс", } = {})
+  form.order(name=name action=action method=method)
+    .order__wrapper
+      .order__title
+        p.order__row
+          span.order__no № 
+          span.order__number=roomNumber
+          span.order__type=` ${typeOfRoom}`
+        p.order__row.order__row_with-margin
+          span.order__price=roomPrice
+          span.order__price=currency
+          span.order__in-time=` ${inTime}`
+
+      .order__dropdown-date
+        +filter-date({ inputFieldType: "range", firstHeader: "Прибытие", secondHeader: "Выезд", })
+      .order__dropdown
+        +title({ type: "h3", text: "Гости", })
+        .order__dropdown-container
+          +dropdown({ 
+            text: "Сколько гостей",
+            hasButtons: true,
+            options: [
+              { text: "взрослые", group: "гости" },
+              { text: "дети", group: "гости" },
+              { text: "младенцы" },
+            ],
+          })
+
+      .order__info-table
+        +info-table({ currency, })
+
+      .order__button
+        +button({
+          styleType: "long", 
+          text: "Забронировать",
+          buttonType: "submit",
+        })

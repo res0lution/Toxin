@@ -1,0 +1,28 @@
+.date-input {
+  &__field {
+    margin-top: 0.375rem;
+    max-width: 150px;
+    position: relative;
+    width: 100%;
+
+    &_width {
+      &_wide {
+        max-width: 266px;
+      }
+    }
+  }
+
+  &__keyboard-arrow {
+    align-items: center;
+    color: $main-shade;
+    display: flex;
+    height: 44px;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    pointer-events: none;
+    width: 44px;
+    z-index: 1;
+  }
+}

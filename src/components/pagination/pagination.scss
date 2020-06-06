@@ -1,0 +1,67 @@
+.pagination {
+  margin: 0;
+  max-width: 240px;
+  padding: 0;
+  text-align: center;
+
+  &__description {
+    color: $dark-shade;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0.625rem 0 0 0;
+  }
+
+  &__item {
+    display: inline-block;
+    font-size: 0.75rem;
+    vertical-align: top;
+  }
+
+  &__ellipsis {
+    color: $main-shade;
+    display: inline-block;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    height: 40px;
+    line-height: 2.625rem;
+    text-align: center;
+    user-select: none;
+    width: 40px;
+  }
+
+  &__link {
+    border-radius: 50%;
+    color: $main-shade;
+    display: inline-block;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    height: 40px;
+    line-height: 2.625rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    width: 40px;
+  
+    &:hover {
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      border-radius: 22px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    &_active {
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    &_next {
+      align-items: center;
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

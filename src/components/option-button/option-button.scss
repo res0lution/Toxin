@@ -1,0 +1,21 @@
+option-button {
+  cursor: pointer;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  user-select: none;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &__apply {
+    color: $purple;
+  }
+
+  &__clear {
+    color: $main-shade;
+  }
+
+  &_hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

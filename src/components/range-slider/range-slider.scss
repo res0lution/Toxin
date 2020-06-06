@@ -1,0 +1,60 @@
+.range-slider {
+  max-width: 266px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price {
+    border: none;
+    color: $main-shade;
+    text-align: end;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    max-width: 50%;
+    pointer-events: none;
+    text-transform: uppercase;
+    width: auto;
+  }
+
+  &__label {
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  span.irs.irs--flat {
+    .irs-line {
+      background: #FFF;
+      border: 1px solid $light-shade;
+      box-sizing: border-box;
+      border-radius: 3px;
+      height: 6px;
+      max-width: 266px;
+      width: 100%;
+    }
+  
+    .irs-handle {
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      border: 2px solid #FFF;
+      border-radius: 50%;
+      box-sizing: border-box;
+      cursor: pointer;
+      height: 14px;
+      margin-top: -1px;
+      outline: none;
+      width: 14px;
+  
+      i {
+        display: none;
+      }
+    }
+  
+    .irs-bar {
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      border-radius: 3px;
+      height: 6px;
+    }
+  }
+}

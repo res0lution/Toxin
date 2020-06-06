@@ -1,0 +1,83 @@
+.checkbox-input {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  max-width: 223px;
+  width: 100%;
+
+  &__header-text {
+    color: $main-shade;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: $main-font-size;
+    line-height: 1.125rem;
+    margin-left: 0.625rem;
+    vertical-align: middle;
+    white-space: normal;
+  }
+
+  &__label {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  &__description {
+    display: inline-block;
+    margin: 0;
+  }
+
+  &__flag {
+    background-color: #fff;
+    border: 1px solid $light-shade;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 20px;
+    padding: 3px 3px 4px 3px;
+    text-align: center;
+    vertical-align: top;
+    width: 20px;
+  }
+
+  &__input {
+    display: none;
+    margin: 0;
+    vertical-align: top;
+    width: 0;
+
+    &:checked {
+      ~ .checkbox-button__flag {
+        border: 1px solid $purple;
+        content: url("../../img/check-box.svg");
+        line-height: $main-font-size;
+      }
+    }
+  }
+
+  &_rich {
+    max-width: 266px;
+  }
+
+  &_rich & {
+    &__label {
+      white-space: normal;
+    }
+
+    &__header-text {
+      color: $dark-shade;
+      font-weight: bold;
+    }
+
+    &__description {
+      color: $main-shade;
+      cursor: pointer;
+      font-family: "Montserrat", Arial, Helvetica, sans-serif;
+      font-size: 0.75rem;
+      font-weight: normal;
+      line-height: $main-font-size;
+      margin-left: 1.875rem;
+      margin-top: 0.375rem;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+include ../checkbox-input/checkbox-input.pug
+include ../icons/icons.pug
+include ../title/title.pug
+
+mixin dropdown-checkbox({ title = "expandable checkbox", values = [["cb1","Enter"], ["cb2","points"], ["cb3","here"]], } = {})
+  section.dropdown-checkbox.js-dropdown-checkbox
+    .dropdown-checkbox__keyboard-arrow.js-dropdown-checkbox__keyboard-arrow
+      +icons({
+        type: "keyboard_arrow_down", 
+        color: "shade",
+      })
+    .dropdown-checkbox__select.js-dropdown-checkbox__select
+      +title({ type: "h3", text: title, })
+    .dropdown-checkbox__option.js-dropdown-checkbox__option.dropdown-checkbox__option_invisible
+      each val in values
+        - const [ name, text, ] = val
+        .dropdown-checkbox__button
+          +checkbox-input({ name, text, })

@@ -1,0 +1,49 @@
+.dropdown-checkbox {
+  max-width: 266px;
+  position: relative;
+  width: 100%;
+
+  &__button {
+    margin-bottom: 0.625rem;
+  }
+
+  &__keyboard-arrow {
+    align-items: center;
+    display: flex;
+    height: 44px;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    pointer-events: none;
+    width: 44px;
+    z-index: 9;
+  }
+
+  &__option {
+    background: #FFF;
+    border: none;
+    box-sizing: border-box;
+    box-shadow: none;
+    display: block;
+    max-width: 266px;
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    z-index: 9;
+
+    &_invisible {
+      display: none;
+      height: 0;
+    }
+  }
+
+  &__select {
+    border: none;
+    cursor: pointer;
+    font-size: 0.75rem;
+    overflow: hidden;
+    line-height: 44px;
+    position: relative;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,33 @@
+include ../rate-button/rate-button.pug
+
+mixin room-card({ hasArrows = false, src = "img/rooms/room888.svg", number = 888, name = "room photo", typeOfRoom = "", price = "9 900", rate = 5, reviews = 145, currency = "₽", inTime = "в сутки", } = {} )
+  section.room-card.js-room-card
+    figure.room-card__slider.js-room-card__slider(class=hasArrows ? "room-card__slider_with-arrows" : null)
+      img(class="room-card__image" src=src alt=name)
+      img(class="room-card__image" src=src alt=name)
+      img(class="room-card_image" src=src alt=name)
+      img(class="room-card__image" src=src alt=name)
+
+    .room-card__description
+      .room-card__row
+        .room-card__paragraph
+          span.room-card__no № 
+          span.room-card__number=number
+          span.room-card__type-of-room=` ${typeOfRoom}`
+
+        .room-preview__paragraph
+          span.room-card__price=price
+          span.room-card__price=currency
+          span.room-card__in-time=` ${inTime}`
+
+      .room-card__row
+        .room-card__underline
+
+      .room-card__row
+        .room-card__paragraph
+          .room-card__rate-button
+            +rate-button({ name, rating: rate, })
+
+        .room-card__paragraph
+          span.room-card__reviews-number=reviews
+          span.room-card__reviews=" Отзывов"

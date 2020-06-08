@@ -49,7 +49,7 @@
     &:checked {
       ~ .checkbox-button__flag {
         border: 1px solid $purple;
-        content: url("../../img/check-box.svg");
+        content: url("./img/check-box.svg");
         line-height: $main-font-size;
       }
     }

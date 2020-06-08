@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const Autoprefixer = require("autoprefixer");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require("webpack");
 
 module.exports = (env, options) => {
   const isProduction = options.mode === "production";
@@ -61,7 +62,31 @@ module.exports = (env, options) => {
           test: /\.pug$/,
           loader: "pug-loader",
         },
+        {
+          test: /\.js$/,
+          loader: "babel-loader",
+          exclude: "/node_modules/",
+        },
       ],
+    },
+    resolve: {
+      extensions: [".js", ".jsx", ".scss"],
+      alias: {
+        "./dependencyLibs/inputmask.dependencyLib":
+          "./dependencyLibs/inputmask.dependencyLib.jquery",
+      },
+    },
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          vendor: {
+            name: "vendors",
+            test: /node_modules/,
+            chunks: "all",
+            enforce: true,
+          },
+        },
+      },
     },
     devServer: {
       contentBase: "./dist",
@@ -77,6 +102,12 @@ module.exports = (env, options) => {
     devtool: isProduction ? false : "eval-sourcemap",
     plugins: [
       Autoprefixer,
+
+      new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery",
+        "window.jQuery": "jquery",
+      }),
 
       new MiniCssExtractPlugin({
         filename: "./css/[name].[hash].css",

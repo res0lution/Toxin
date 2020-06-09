@@ -1,0 +1,116 @@
+.form-elements {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 140px;
+
+  &__container {
+    width: 1440px;
+    display: grid;
+    margin-right: 10px;
+    margin-left: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:  'fields         check-buttons     buttons' 
+                          'left-dropdown  middle-dropdown   right-dropdown' 
+                          'left-comments  comments          comments';
+    grid-row-gap: 100px;
+    grid-column-gap: 10px;
+
+    @media (max-width: 918px) {
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas:    'fields check-buttons' 
+                              'buttons left-dropdown'
+                              'buttons left-comments'
+                              'middle-dropdown right-dropdown'
+                              'comments comments'
+                              ;
+      grid-row-gap: 0px;
+    }
+
+    @media (max-width: 618px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto auto auto auto;
+      grid-template-areas:    'fields' 
+                              'check-buttons' 
+                              'buttons'
+                              'left-dropdown'
+                              'middle-dropdown'
+                              'right-dropdown'
+                              'left-comments'
+                              'comments'
+                              ;
+      grid-row-gap: 0px;
+    }
+
+    @media (max-width: 380px) {
+      grid-template-columns: 300px;
+    }
+  }
+
+  &__checkbox-button {
+    margin-top: 10px;
+  }
+    
+  &__fields { 
+    grid-area: fields;
+  }
+  
+  &__check-buttons { 
+    grid-area: check-buttons; 
+  }
+
+  &__like-button {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  &__rate-button {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  &__buttons { 
+    grid-area: buttons; 
+  }
+
+  &__button {
+    margin-top: 16px;
+  }
+  
+  &__left-dropdown { 
+    grid-area: left-dropdown; 
+  }
+  
+  &__left-comments { 
+    grid-area: left-comments; 
+  }
+  
+  &__comments { 
+    grid-area: comments; 
+  }
+  
+  &__wrapper {
+    margin-bottom: 40px;     
+  }
+  
+  &__heading {
+    margin-bottom: 5px;
+  }
+
+  &__radio-buttons{
+    display: flex;
+  }
+
+  &__radio-button{
+    margin-right: 20px;
+  }
+
+  &__logo-ui-kit {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+}

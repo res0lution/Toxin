@@ -115,6 +115,11 @@ module.exports = (env, options) => {
 
       new HtmlWebpackPlugin({
         filename: "index.html",
+        template: "./src/pages/room-details/room-details.pug",
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: "search-room.html",
         template: "./src/pages/search-room/search-room.pug",
       }),
 

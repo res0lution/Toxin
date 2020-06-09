@@ -1,0 +1,20 @@
+mixin bullet-list({ values = [ { text: 'Enter', circleColor: 'green' }, { text: 'paragraphs', circleColor: 'black' }, { text: 'here', circleColor: 'pink' }], reserveText = 'There are no values', } = {})
+  - let circleColorModifier
+  section.bullet-list
+    ul.bullet-list__list
+      each value in values
+        - const { circleColor, text, } = value
+        case circleColor
+          when 'gold'
+            - colorModifier = 'bullet-list__item_color_gold'
+          when 'green'
+            - colorModifier = 'bullet-list__item_color_green'
+          when 'pink'
+            - colorModifier = 'bullet-list__item_color_pink'
+          when 'black'
+            - colorModifier = 'bullet-list__item_color_black'
+          default
+            - colorModifier = null
+        li.bullet-list__item(class=colorModifier)=text
+      else
+        li.bullet-list__item=reserveText

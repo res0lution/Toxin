@@ -1,4 +1,4 @@
-include ../rate-button/rate-button.pug
+include ../rating-button/rating-button.pug
 
 mixin room-card({ 
   roomNumber = 888, 
@@ -36,8 +36,8 @@ mixin room-card({
 
       .room-card__row
         .room-card__paragraph
-          .room-card__rate-button
-            +rate-button({ name, rating: rate, })
+          .room-card__rating-button
+            +rating-button({ name, rating: rate, })
 
         .room-card__paragraph
           span.room-card__reviews-count=reviews

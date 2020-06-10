@@ -1,0 +1,19 @@
+include ../icons/icons.pug
+
+mixin rating-button({ name = "rate-button", rating = 5, } = {})
+  - let i = 0
+
+  span.rating-button.js-rating-button
+    while i < 5
+      label.rating-button__label.js-rating-button__label
+        +icons({
+          type: "star_border", 
+          color: "purple-gradient",
+        })
+        
+        input.rating-button__input.js-rating-button__input(
+          type="radio" 
+          checked=rating-1===i 
+          name=name 
+          value=i+=1
+        )

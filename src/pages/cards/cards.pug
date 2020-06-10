@@ -1,15 +1,15 @@
 extends ../index
 
 block variables
-  - var pageTitle = "Cards"
+  - let pageTitle = "Cards"
 
 block content
   include ../../components/room-card/room-card.pug
+  include ../../components/logo-ui-kit/logo-ui-kit.pug
   include ../../components/sign-in-form/sign-in-form.pug
   include ../../components/order/order.pug
   include ../../components/registration-form/registration-form.pug
   include ../../components/filter/filter.pug
-  include ../../components/logo-ui-kit/logo-ui-kit.pug
 
   main.cards
     .cards__logo-ui-kit

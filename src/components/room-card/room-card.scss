@@ -1,4 +1,4 @@
-.room-preview {
+.room-card {
   background: #fff;
   box-shadow: 0px 10px 20px $the-lightest-shade;
   border-radius: 4px;
@@ -10,7 +10,7 @@
     box-sizing: border-box;
     border-radius: 50%;
     height: 7px;
-    margin-left: 0.25rem;
+    margin-left: 3.5px;
     width: 7px;
 
     &_full {
@@ -23,7 +23,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1.25rem;
+    padding: 20px 20px;
   }
 
   &__image {
@@ -34,28 +34,28 @@
     color: $main-shade;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-size: 0.75rem;
+    font-size: 0.86rem;
     font-weight: normal;
-    line-height: 1.125rem;
+    line-height: 1.3rem;
   }
 
   &__underline {
     background: rgba(31, 32, 65, 0.1);
     height: 1px;
-    margin-top: 0.625rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
     margin-left: auto;
+    margin-top: 10px;
     margin-right: auto;
     width: 230px;
   }
 
-  &__type-of-room {
+  &__type {
     color: $purple;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-size: 0.75rem;
+    font-size: 0.86rem;
     font-weight: bold;
-    line-height: 1rem;
+    line-height: 1.1rem;
     text-transform: uppercase;
   }
 
@@ -63,40 +63,40 @@
     color: $the-darkest-shade;
     font-family: "Quicksand", "Open Sans", Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-size: 0.75rem;
+    font-size: $main-font-size;
     font-weight: bold;
-    line-height: 1rem;
+    line-height: 17px;
   }
 
   &__number {
     color: $the-darkest-shade;
     font-family: "Quicksand", "Open Sans", Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-size: 1.25rem;
+    font-size: 1.36rem;
     font-weight: bold;
-    line-height: 1rem;
+    line-height: 1.3rem;
   }
 
   &__price {
     color: $main-shade;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-size: 0.875rem;
+    font-size: $main-font-size;
     font-weight: bold;
-    line-height: 1.125rem;
+    line-height: 1.3rem;
   }
 
   &__rate-button {
-    margin-top: 0.125rem;
+    margin-top: 1px;
   }
 
-  &__reviews-number {
+  &__reviews-count {
     color: $main-shade;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-size: 0.875rem;
+    font-size: $main-font-size;
     font-weight: bold;
-    line-height: 1.125rem;
+    line-height: 1.3rem;
     text-align: right;
   }
 
@@ -104,9 +104,9 @@
     color: $main-shade;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-size: 0.875rem;
+    font-size: $main-font-size;
     font-weight: normal;
-    line-height: 1.125rem;
+    line-height: 1.3rem;
     text-align: right;
   }
 
@@ -119,14 +119,14 @@
   &__slider {
     &_with-arrows {
       &::before {
+        bottom: 0;
         border-radius: 4px 0 0 0;
         box-shadow: inset 100px 0px 60px -80px rgba(0, 0, 0, 0.75);
-        bottom: 0;
         content: "";
         left: 0;
-        right: 0;
         position: absolute;
         top: 0;
+        right: 0;
         z-index: 1;
       }
 
@@ -136,20 +136,21 @@
         bottom: 0;
         content: "";
         left: 0;
-        right: 0;
         position: absolute;
         top: 0;
+        right: 0;
         z-index: 1;
       }
     }
   }
 
+  // overwritting plugin`s styles
   .slick-slider {
     .slick-slide {
       height: 100%;
 
       > div {
-        margin-bottom: -0.25rem;
+        margin-bottom: -4px;
       }
     }
 
@@ -160,13 +161,13 @@
     .slick-dots {
       bottom: 10px;
       right: 0;
-      padding: 0 1.125rem 0.75rem 0;
+      padding: 0 18px 12px 0;
       text-align: right;
     }
 
     .slick-dots li {
       height: auto;
-      margin-right: 0.375rem;
+      margin-right: 5px;
       width: auto;
 
       button {
@@ -197,7 +198,7 @@
     .slick-arrow {
       &::before {
         font-family: "Material Icons";
-        font-size: 1.5rem;
+        font-size: 1.72rem;
         opacity: 1;
       }
     }

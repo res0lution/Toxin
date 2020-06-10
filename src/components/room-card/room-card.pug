@@ -1,11 +1,22 @@
 include ../rate-button/rate-button.pug
 
-mixin room-card({ hasArrows = false, src = "../../img/rooms/room-1.jpg", number = 888, name = "room photo", typeOfRoom = "", price = "9 900", rate = 5, reviews = 145, currency = "₽", inTime = "в сутки", } = {} )
+mixin room-card({ 
+  roomNumber = 888, 
+  src = "img/rooms/room888.svg",
+  price = "9 900",
+  name = "room photo",  
+  rate = 5, 
+  reviews = 145,
+  type = "",
+  hasArrow = false
+  currency = "₽", 
+  inTime = "в сутки", 
+} = {})
   section.room-card.js-room-card
     figure.room-card__slider.js-room-card__slider(class=hasArrows ? "room-card__slider_with-arrows" : null)
       img(class="room-card__image" src=src alt=name)
       img(class="room-card__image" src=src alt=name)
-      img(class="room-card_image" src=src alt=name)
+      img(class="room-card__image" src=src alt=name)
       img(class="room-card__image" src=src alt=name)
 
     .room-card__description
@@ -13,9 +24,9 @@ mixin room-card({ hasArrows = false, src = "../../img/rooms/room-1.jpg", number 
         .room-card__paragraph
           span.room-card__no № 
           span.room-card__number=number
-          span.room-card__type-of-room=` ${typeOfRoom}`
+          span.room-card__type=` ${type}`
 
-        .room-preview__paragraph
+        .room-card__paragraph
           span.room-card__price=price
           span.room-card__price=currency
           span.room-card__in-time=` ${inTime}`
@@ -29,5 +40,5 @@ mixin room-card({ hasArrows = false, src = "../../img/rooms/room-1.jpg", number 
             +rate-button({ name, rating: rate, })
 
         .room-card__paragraph
-          span.room-card__reviews-number=reviews
+          span.room-card__reviews-count=reviews
           span.room-card__reviews=" Отзывов"

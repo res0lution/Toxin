@@ -19,3 +19,7 @@ importAll(require.context("../pages", true, /\.(css|scss)$/));
 importAll(require.context("./", true, /\.(js)$/));
 
 importAll(require.context("../components", true, /\.(js)$/));
+
+importAll(
+  require.context("../static/", true, /\.(svg|png|ico|xml|json)$/)
+);

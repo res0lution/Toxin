@@ -115,10 +115,10 @@ module.exports = (env, options) => {
 
       new HtmlWebpackPlugin({
         filename: "index.html",
-        template: "./src/pages/landing-page/landing-page.pug",
+        template: "./src/pages/index.pug",
       }),
 
-      new HtmlWebpackPlugin({
+      /*new HtmlWebpackPlugin({
         filename: "room-details.html",
         template: "./src/pages/room-details/room-details.pug",
       }),
@@ -136,7 +136,7 @@ module.exports = (env, options) => {
       new HtmlWebpackPlugin({
         filename: "sign-in.html",
         template: "./src/pages/sign-in/sign-in.pug",
-      }),
+      }),*/
     ],
   };
 };

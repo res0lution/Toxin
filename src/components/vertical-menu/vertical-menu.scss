@@ -1,7 +1,28 @@
 .vertical-menu {
+  &__link {
+    color: $main-shade;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: $main-font-size;
+    line-height: 0;
+    position: relative;
+    text-decoration: none;
+  }
+  //em
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 768px) {
+      align-items: center;
+      padding-bottom: 10px;
+    }
+  }
+
   &__item {
     display: block;
-    margin-bottom: 1.25rem;
+    margin-bottom: 20px;
     margin-right: 0;
 
     &:last-of-type {
@@ -12,46 +33,12 @@
       text-align: center;
 
       &:last-of-type {
-        margin-bottom: 1rem;
+        margin-bottom: 16px;
       }
     }
 
     @media (max-width: 768px) {
       text-align: center;
-    }
-  }
-
-  &__link {
-    color: $main-shade;
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    line-height: 1.55rem;
-    position: relative;
-    text-decoration: none;
-
-    &:hover {
-      color: #000;
-      transition-duration: 0.3s;
-    }
-  }
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-
-    &_position_center {
-      margin-right: 2rem;
-
-      @media (max-width: 768px) {
-        margin-right: 0;
-      }
-    }
-
-    @media (max-width: 768px) {
-      align-items: center;
-      padding-bottom: 0.625rem;
     }
   }
 }

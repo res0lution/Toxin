@@ -49,7 +49,7 @@ module.exports = (env, options) => {
         },
         {
           test: /\.(eot|svg|ttf|woff|woff2)$/,
-          exclude: [/blocks/, /img/, /static/],
+          exclude: [/components/, /img/, /static/],
           use: {
             loader: "file-loader",
             options: {
@@ -66,6 +66,19 @@ module.exports = (env, options) => {
           test: /\.js$/,
           loader: "babel-loader",
           exclude: "/node_modules/",
+        },
+        {
+          test: /\.(svg|png|ico|xml|json)$/,
+          exclude: [/fonts/, /components/, /img/, /node_modules/],
+          use: [
+            {
+              loader: "file-loader",
+              options: {
+                name: "./[name].[ext]",
+                publicPath: "../",
+              },
+            },
+          ],
         },
       ],
     },
@@ -117,26 +130,6 @@ module.exports = (env, options) => {
         filename: "index.html",
         template: "./src/pages/index.pug",
       }),
-
-      /*new HtmlWebpackPlugin({
-        filename: "room-details.html",
-        template: "./src/pages/room-details/room-details.pug",
-      }),
-
-      new HtmlWebpackPlugin({
-        filename: "search-room.html",
-        template: "./src/pages/search-room/search-room.pug",
-      }),
-
-      new HtmlWebpackPlugin({
-        filename: "registration.html",
-        template: "./src/pages/registration/registration.pug",
-      }),
-
-      new HtmlWebpackPlugin({
-        filename: "sign-in.html",
-        template: "./src/pages/sign-in/sign-in.pug",
-      }),*/
     ],
   };
 };

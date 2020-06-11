@@ -3,19 +3,19 @@
   display: inline-block;
   font-family: "Material Icons";
   font-style: normal;
-  font-size: 1.5rem;
+  font-size: 1.72rem;
   font-weight: normal;
   letter-spacing: normal;
-  user-select: none;
   text-transform: none;
-  text-rendering: optimizeLegibility;
   word-wrap: normal;
   white-space: nowrap;
+  user-select: none;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
 
   &_color {
-    &_dark-shade {
+    &_dark {
       color: $dark-shade;
     }
 
@@ -23,12 +23,14 @@
       color: $main-shade;
     }
 
-    &_light-shade {
+    &_light {
       color: $light-shade;
     }
 
-    &_purple-gradient {
-      color: $purple;
+    &_purple {
+      background: linear-gradient(180deg, $purple 0%, $gradient-end-purple 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     &_purple {
@@ -40,13 +42,13 @@
     }
   }
 
-  &_size {
+  &_size { 
     &_large {
-      font-size: 48px;
+      font-size: 3.43rem;
     }
 
     &_small {
-      font-size: 10px;
+      font-size: 0.71rem;
     }
   }
 }

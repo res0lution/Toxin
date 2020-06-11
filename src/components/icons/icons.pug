@@ -1,18 +1,18 @@
-mixin icons({ type = "Enter symbol text", size, color, } = {})
-  - let colorModifier = ""
-  - let sizeModifier = ""
+mixin icons({ color, size, symbol = "icon symbol" } = {})
+  - let colorModifier = ''
+  - let sizeModifier = ''
 
   case color
-    when "dark-shade"
-      - colorModifier = " icons_color_dark-shade"
-    when "shade"
-      - colorModifier = " icons_color_shade"
-    when "light-shade"
-      - colorModifier = " icons_color_light-shade"
+    when "dark"
+      - colorModifier = " icons_color_dark"
+    when "default"
+      - colorModifier = " icons_color_default"
+    when "light"
+      - colorModifier = " icons_color_light"
     when "white"
       - colorModifier = " icons_color_white"
-    when "purple-gradient"
-      - colorModifier = " icons_color_purple-gradient"
+    when "purple"
+      - colorModifier = " icons_color_purple"
 
   case size
     when "large"
@@ -20,4 +20,4 @@ mixin icons({ type = "Enter symbol text", size, color, } = {})
     when "small"
       - sizeModifier = "icons_size_small"
 
-  i.icons(class=`${sizeModifier}${colorModifier}`)=type
+  i.icons(class=`${sizeModifier}${colorModifier}`)=symbol

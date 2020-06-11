@@ -1,21 +1,22 @@
-include ../radio-input/radio-input.pug
-include ../title/title.pug
-include ../text-input/text-input.pug
+include ../radio-button/radio-button.pug
 include ../toggle-button/toggle-button.pug
 include ../button/button.pug
+include ../title/title.pug
+include ../text-input/text-input.pug
 
-mixin registration-form( { action="/address/need/change", name="registration-form", method="post", } = {} )
+mixin registration-form({ action="/mock-address/change-me", name="registration-form", method="post", } = {} )
   form.registration-form(action=action name=name method=method)
     .registration-form__wrapper
       .registration-form__title
-        +title({ type: "h1", text: "Регистрация аккаунта", })
+        +title({ tag: "h1", text: "Регистрация аккаунта", })
 
       .registration-form__first-name
         +text-input({
           type: "text",
-          name: "name",
+          name: "first-name",
           placeholder: "Имя",
         })
+
       .registration-form__second-name
         +text-input({
           type: "text",
@@ -23,14 +24,15 @@ mixin registration-form( { action="/address/need/change", name="registration-for
           placeholder: "Фамилия",
         })
 
-      .registration-form__radio-inputs
-        .registration-form__radio-input
-          +radio-input({ name:"gender", value:"man", text:"Мужчина", isChecked:"true", })
-        .registration-form__radio-input
-          +radio-input({ name:"gender", value:"woman", text:"Женщина", })
+      .registration-form__radio-buttons
+        .registration-form__radio-button
+          +radio-button({ name:"gender", value:"man", text:"Мужчина", isChecked:"true", })
+
+        .registration-form__radio-button
+          +radio-button({ name:"gender", value:"woman", text:"Женщина", })
 
       .registration-form__birthday-title
-        +title({ type: "h3", text: "Дата рождения", })
+        +tag({ tag: "h3", text: "Дата рождения", })
       
       .registration-form__birthday
         +text-input({
@@ -39,7 +41,7 @@ mixin registration-form( { action="/address/need/change", name="registration-for
         })
 
       .registration-form__login-data-title
-        +title({ type: "h3", text: "Данные для входа в сервис", })
+        +title({ tag: "h3", text: "Данные для входа в сервис", })
 
       .registration-form__email
         +text-input({
@@ -47,8 +49,9 @@ mixin registration-form( { action="/address/need/change", name="registration-for
           name: "email",
           placeholder: "Email",
         })
+
       .registration-form__password
-        +text-input({
+        +text-field({
           type: "password",
           name: "password",
           placeholder: "Пароль",
@@ -58,16 +61,17 @@ mixin registration-form( { action="/address/need/change", name="registration-for
         +toggle-button({ name: "toggle", text: "Получать спецпредложения", })
 
       .registration-form__button
-        +button({
-          styleType: "long", 
+        +button({ 
           text: "Перейти к оплате",
-          type: "submit",
+          buttonType: "submit",
+          style: "long",
         })   
 
       .registration-form__login
         p.registration-form__login-text Уже есть аккаунт на Toxin
-        +button({
-          styleType: "faint", 
-          href:"/address/need/change", 
+
+        +button({ 
+          href:"/mock-address/change-me", 
           text: "Войти", 
+          style: "faint",
         })

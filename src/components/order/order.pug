@@ -1,10 +1,19 @@
-include ../title/title.pug
-include ../info-table/info-table.pug
 include ../filter-date/filter-date.pug
 include ../dropdown/dropdown.pug
 include ../button/button.pug
+include ../info-table/info-table.pug
+include ../title/title.pug
 
-mixin order({ name="order", action="/address/need/change", method="get", roomPrice = "9 990", roomNumber = "888", currency = "₽", inTime = "в сутки", typeOfRoom = "люкс", } = {})
+mixin order({ 
+  name="order", 
+  action="/mock-address/change-me", 
+  method="get", 
+  currency = '₽', 
+  inTime = 'в сутки', 
+  typeOfRoom = 'люкс', 
+  roomPrice = '9 990', 
+  roomNumber = '888', 
+} = {})
   form.order(name=name action=action method=method)
     .order__wrapper
       .order__title
@@ -18,17 +27,17 @@ mixin order({ name="order", action="/address/need/change", method="get", roomPri
           span.order__in-time=` ${inTime}`
 
       .order__dropdown-date
-        +filter-date({ inputFieldType: "range", firstHeader: "Прибытие", secondHeader: "Выезд", })
+        +filter-date({ inputFieldType: 'range', firstHeader: 'Прибытие', secondHeader: 'Выезд', })
       .order__dropdown
-        +title({ type: "h3", text: "Гости", })
+        +heading({ type: 'h3', text: 'Гости', })
         .order__dropdown-container
           +dropdown({ 
-            text: "Сколько гостей",
+            text: 'Сколько гостей',
             hasButtons: true,
             options: [
-              { text: "взрослые", group: "гости" },
-              { text: "дети", group: "гости" },
-              { text: "младенцы" },
+              { text: 'взрослые', group: 'гости' },
+              { text: 'дети', group: 'гости' },
+              { text: 'младенцы' },
             ],
           })
 
@@ -37,7 +46,7 @@ mixin order({ name="order", action="/address/need/change", method="get", roomPri
 
       .order__button
         +button({
-          styleType: "long", 
-          text: "Забронировать",
-          buttonType: "submit",
+          styleType: 'long', 
+          text: 'Забронировать',
+          buttonType: 'submit',
         })

@@ -32,7 +32,7 @@ mixin registration-form({ action="/mock-address/change-me", name="registration-f
           +radio-button({ name:"gender", value:"woman", text:"Женщина", })
 
       .registration-form__birthday-title
-        +tag({ tag: "h3", text: "Дата рождения", })
+        +title({ tag: "h3", text: "Дата рождения", })
       
       .registration-form__birthday
         +text-input({
@@ -51,7 +51,7 @@ mixin registration-form({ action="/mock-address/change-me", name="registration-f
         })
 
       .registration-form__password
-        +text-field({
+        +text-input({
           type: "password",
           name: "password",
           placeholder: "Пароль",

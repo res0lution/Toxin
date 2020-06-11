@@ -4,9 +4,10 @@ include ../date-input/date-input.pug
 include ../date-picker/date-picker.pug
 
 
-mixin filter-date({ inputFieldType = "single", firstHeader = "date Dropdown", secondHeader = "date Dropdown", } = {})
+mixin filter-date({ inputType = "single", firstHeader = "date Dropdown", secondHeader = "date Dropdown", } = {})
   section.filter-date.js-filter-date
-    case inputFieldType
+
+    case inputType
       when "single"
         .filter-date__input
           +date-input({ header: firstHeader, type: "entire", placeholder: "ДД.МЕС - ДД.МЕС", width: "wide", })
@@ -14,4 +15,5 @@ mixin filter-date({ inputFieldType = "single", firstHeader = "date Dropdown", se
         .filter-date__inputs
           +date-input({ header: firstHeader, type: "start", placeholder: "ДД.ММ.ГГГГ", })
           +date-input({ header: secondHeader, type: "end", placeholder: "ДД.ММ.ГГГГ", })
+          
     +date-picker()

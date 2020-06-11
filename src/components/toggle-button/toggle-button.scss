@@ -9,8 +9,8 @@
     cursor: pointer;
     display: inline-block;
     font-family: "Montserrat", Arial, sans-serif;
-    font-size: 1rem;
-    margin-left: 0.625rem;
+    font-size: $main-font-size;
+    margin-left: 10px;
     vertical-align: middle;
     white-space: pre-wrap;
   }
@@ -23,8 +23,8 @@
     cursor: pointer;
     display: inline-block;
     height: 20px;
-    padding-right: 0.1875rem;
-    padding-left: 0.1875rem;
+    padding-left: 3px;
+    padding-right: 3px;
     text-align: left;
     vertical-align: middle;
     width: 40px;
@@ -50,7 +50,11 @@
     }
 
     &:checked ~ .toggle-button__slider > .toggle-button__circle {
-      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      background: linear-gradient(
+        180deg,
+        $purple 0%,
+        $gradient-end-purple 100%
+      );
     }
   }
 }

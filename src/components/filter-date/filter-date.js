@@ -3,23 +3,24 @@ import DateInput from "../date-input/date-input";
 
 class FilterDate {
   constructor(calendar) {
-    this.calendar = $(calendar);
+    this.$calendar = $(calendar);
+
     this.findDOMElements();
     this.initCalendar();
   }
 
   findDOMElements() {
-    this.input = new DateInput(this.calendar, "entire");
-    this.input2 = this.input.getElement();
+    this.input = new DateTe(this.$calendar, "entire");
+    this.$input = this.input.getElement();
     this.isRange = false;
 
-    if (this.input2.length === 0) {
+    if (this.$input.length === 0) {
       this.isRange = true;
-      this.startInput = new DateTextField(this.calendar, "start");
-      this.startInput2 = this.startInput.getElement();
-      this.endInput = new DateTextField(this.calendar, "end");
-      this.endInput2 = this.endInput.getElement();
-      this.datepickerPluginInstance = this.startInput2
+      this.startInput = new DateInput(this.$calendar, "start");
+      this.$startInput = this.startInput.getElement();
+      this.endInput = new DateInput(this.$calendar, "end");
+      this.$endInput = this.endInput.getElement();
+      this.datepickerPluginInstance = this.$startInput
         .datepicker()
         .data("datepicker");
     }
@@ -27,50 +28,50 @@ class FilterDate {
 
   initCalendar() {
     if (this.isRange) {
-      const { startInput2, endInput2 } = this;
+      const { $startInput, $endInput } = this;
 
-      startInput2.datepicker({
+      $startInput.datepicker({
         range: true,
         multipleDatesSeparator: " - ",
         language: "ru",
         clearButton: true,
       });
 
-      startInput2.datepicker({
+      $startInput.datepicker({
         onSelect(formattedDate) {
           const inputValues = formattedDate.split("-");
           const [startValue, secondValue] = inputValues;
-          startInput2.val(startValue);
-          endInput2.val(secondValue);
+          $startInput.val(startValue);
+          $endInput.val(secondValue);
         },
       });
 
       new DatePicker(
-        this.startInput2.datepicker().data("datepicker"),
-        this.calendar
+        this.$startInput.datepicker().data("datepicker"),
+        this.$calendar
       );
 
       this.initEndInput();
     } else {
-      this.input2.datepicker({
+      this.$input.datepicker({
         range: true,
         multipleDatesSeparator: " - ",
         language: "ru",
         dateFormat: "dd M",
         clearButton: true,
       });
-      this.datepickerPluginInstance = this.input2
+
+      this.datepickerPluginInstance = this.$input
         .datepicker()
         .data("datepicker");
+      new DatePicker(this.datepickerPluginInstance, this.$calendar);
 
-      new DatePicker(this.datepickerPluginInstance, this.calendar);
-      
       this.setAdditionalClass();
     }
   }
 
   initEndInput() {
-    this.endInput.eventListenerBind(
+    this.endInput.addEventListener(
       "click",
       this.handleEndInputClick.bind(this)
     );

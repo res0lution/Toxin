@@ -1,6 +1,6 @@
 include ../icons/icons.pug
 
-mixin button({ styleType = "simple", href = "/address/need/change", text = "click me", buttonType, size, } = {})
+mixin button({ href = "/mock-address/change-me", style = "simple", text = "button", buttonType, size, } = {})
   - let isSubmit = false
   - let sizeModifier
   - let typeModifier
@@ -10,29 +10,29 @@ mixin button({ styleType = "simple", href = "/address/need/change", text = "clic
     when "button"
       - tag = "button"
     when "submit"
-      - tag = "button"
       - typeModifier = "submit"
       - isSubmit = true
       - href = null
+      - tag = "button"
     default
       - tag = "a"
 
   case size
     when "small"
-      - sizeModifier = "btn_size_small"
+      - sizeModifier = "button_size_small"
     when "narrow"
-      - sizeModifier = "btn_size_narrow"
+      - sizeModifier = "button_size_narrow"
 
-  case styleType
-    when "faint"
-      .btn.btn_faint(class=sizeModifier)
-        #{tag}(class="btn__key" type=typeModifier href=href)=text
+  case style
     when "long"
-      #{tag}(class="btn btn_long" class=sizeModifier type=typeModifier href=href)=text
-        .btn__arrow
+      #{tag}(class="button button_long" class=sizeModifier type=typeModifier href=href)=text
+        .button__arrow
           +icons({
-            type: "arrow_forward", 
+            icon: "arrow_forward", 
             color: "white",
           })
+    when "faint"
+      .button.button_faint(class=sizeModifier)
+        #{tag}(class='button__key' type=typeModifier href=href)=text
     default
-      #{tag}(class=`btn btn_${styleType}` class=sizeModifier type=typeModifier href=href)=text
+      #{tag}(class=`button button_${styleType}` class=sizeModifier type=typeModifier href=href)=text

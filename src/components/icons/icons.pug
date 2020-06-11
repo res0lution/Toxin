@@ -1,4 +1,4 @@
-mixin icons({ color, size, symbol = "icon symbol" } = {})
+mixin icons({ color, size, icon = "icon symbol" } = {})
   - let colorModifier = ''
   - let sizeModifier = ''
 
@@ -20,4 +20,4 @@ mixin icons({ color, size, symbol = "icon symbol" } = {})
     when "small"
       - sizeModifier = "icons_size_small"
 
-  i.icons(class=`${sizeModifier}${colorModifier}`)=symbol
+  i.icons(class=`${sizeModifier}${colorModifier}`)=icon

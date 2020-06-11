@@ -10,39 +10,39 @@
   min-height: 358px;
   width: 100%;
 
+  &__button {
+    margin-top: 19px;
+  }
+
+  &__login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 29px;
+  }
+
+  &__login-text {
+    color: #000;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: $main-font-size;
+    font-weight: normal;
+    line-height: 18px;
+  }
+
   &__email {
-    margin-top: 1.25rem;
+    margin-top: 20px;
   }
 
   &__password {
-    margin-top: 0.625rem;
+    margin-top: 10px;
   }
 
   &__wrapper {
     padding: calc(40px - 1px) calc(30px - 1px) calc(30px - 1px) calc(30px - 1px);
   }
 
-  &__button {
-    margin-top: 1.3rem;
-  }
-
-  &__login {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1.91rem;
-  }
-
-  &__login-text {
-    color: #000;
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1rem;
-    line-height: 1.6rem;
-  }
-
-  @media (max-width: 380px) {
+  @media (max-width: 380px) {    
     min-width: 310px;
     width: min-content;
   }

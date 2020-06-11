@@ -1,10 +1,11 @@
 import "air-datepicker/dist/css/datepicker.min.css";
 import "air-datepicker";
 
-class DatePicker{
-  constructor(datepicker, containerOfTargetBlock) {
+class DatePicker {
+  constructor(datepicker, $containerOfTargetBlock) {
     this.datepickerPluginInstance = datepicker;
-    this.containerOfTargetBlock = containerOfTargetBlock;
+    this.$containerOfTargetBlock = $containerOfTargetBlock;
+
     this.init();
   }
 
@@ -13,35 +14,35 @@ class DatePicker{
     this.initLanguage();
     this.addCustomClass();
     this.createApplyButton();
-    this.bindEventListeners();
-    this.removeCommaFromTitle();
+    this.addEventListeners();
+    this.removeTitleComma();
     this.replaceNavArrows();
-    this.replaceCalendarToBlock();
+    this.replaceCalendar();
   }
 
   findDOMElements() {
-    this.datepicker = this.datepickerPluginInstance.datepicker;
-    this.calendarInput = this.datepickerPluginInstance.el;
-    this.title = this.datepicker.find(".datepicker--nav-title");
+    this.$datepicker = this.datepickerPluginInstance.$datepicker;
+    this.$calendarInput = this.datepickerPluginInstance.$el;
+    this.$title = this.$datepicker.find(".datepicker--nav-title");
   }
 
-  replaceCalendarToBlock() {
-    this.datepickerContainer = this.containerOfTargetBlock.find(
-      ".date-picker-calendar"
+  replaceCalendar() {
+    this.$datepickerContainer = this.$containerOfTargetBlock.find(
+      ".date-picker"
     );
 
-    if (this.datepickerContainer.length > 0) {
-      this.datepickerContainer.append(this.datepicker);
+    if (this.$datepickerContainer.length > 0) {
+      this.$datepickerContainer.append(this.$datepicker);
     }
 
     this.handleWindowResize();
   }
 
   handleWindowResize() {
-    const containerWidth = this.containerOfTargetBlock
+    const containerWidth = this.$containerOfTargetBlock
       .children(":first")
       .width();
-    this.datepicker.css("width", containerWidth);
+    this.$datepicker.css("width", containerWidth);
   }
 
   setApplyButtonText(text) {
@@ -49,15 +50,15 @@ class DatePicker{
   }
 
   createApplyButton() {
-    this.buttonsContainer = this.datepicker.find(".datepicker--buttons");
-    this.applyButton = $("<span>", {
+    this.$buttonsContainer = this.$datepicker.find(".datepicker--buttons");
+    this.$applyButton = $("<span>", {
       text: this.applyButtonText,
       class: "date-picker__apply-button",
-    }).appendTo(this.buttonsContainer);
+    }).appendTo(this.$buttonsContainer);
   }
 
-  bindEventListeners() {
-    this.applyButton.on("click", this.handleApplyButtonClick.bind(this));
+  addEventListeners() {
+    this.$applyButton.on("click", this.handleApplyButtonClick.bind(this));
 
     $(window).on("resize", this.handleWindowResize.bind(this));
   }
@@ -113,12 +114,11 @@ class DatePicker{
       timeFormat: "hh:ii",
       firstDay: 1,
     };
-
     this.setApplyButtonText("Применить");
   }
 
-  removeCommaFromTitle() {
-    this.calendarInput.datepicker({
+  removeTitleComma() {
+    this.$calendarInput.datepicker({
       navTitles: {
         days: "MM <i>yyyy</i>",
       },
@@ -126,16 +126,16 @@ class DatePicker{
   }
 
   replaceNavArrows() {
-    this.calendarInput.datepicker({
+    this.$calendarInput.datepicker({
       nextHtml:
-        '<i class="date-picker__icon date-picker__icon_color_purple">arrow_forward</i>',
+        `<i class="date-picker__icon date-picker__icon_color_purple">arrow_forward</i>`,
       prevHtml:
-        '<i class="date-picker__icon date-picker__icon_color_purple">arrow_back</i>',
+        `<i class="date-picker__icon date-picker__icon_color_purple">arrow_back</i>`,
     });
   }
 
   addCustomClass() {
-    this.calendarInput.datepicker({
+    this.$calendarInput.datepicker({
       classes: "date-picker__inner",
     });
   }

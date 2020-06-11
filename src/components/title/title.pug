@@ -1,13 +1,13 @@
-mixin title({ type = "h3", text = "Header", weight, color, } = {})
-  - let weightModifier = ""
+mixin title({ tag = "h3", text = "Header text", color, weight, } = {})
   - let colorModifier = ""
+  - let weightModifier = ""
   
   case color
-    when "light shade"
-      - colorModifier = " title_color_light-shade"
-
+    when "light"
+      - colorModifier = " title_color_light"
+  
   case weight
     when "normal"
-      - weightModifier = " title_weight_normal"
+      - weightModifier = ' heading_weight_normal'
 
-  #{type}.title(class = `title_type_${type}${colorModifier}${weightModifier}`)=text
+  #{tag}.title(class = `title_type_${tag}${colorModifier}${weightModifier}`)=text

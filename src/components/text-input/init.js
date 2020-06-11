@@ -1,12 +1,13 @@
-import TextInput from "./text-input";
+import TextField from "./text-input";
 
 $(() => {
-  const textInputs = $(".js-text-input");
+  const $textInputs = $(".js-text-input");
 
-  textInputs.each((i, val) => {
-    const isMaskedTextInput = $(val).hasClass("text-input_masked");
+  $textInputs.each((i, item) => {
+    const isMaskedTextInput = $(item).hasClass("text-input_masked");
+
     if (isMaskedTextInput) {
-      new TextInput(val);
+      new TextInput(item);
     }
   });
 });

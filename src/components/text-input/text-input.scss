@@ -5,23 +5,22 @@
   box-sizing: border-box;
   color: $light-shade;
   display: inline-block;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  line-height: 3.1rem;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: $main-font-size;
+  line-height: 3rem;
   max-width: 320px;
-  padding-left: 0.93rem;
-  padding-top: 0;
   padding-bottom: 0;
+  padding-left: 15px;
+  padding-top: 0;
   position: relative;
   text-overflow: ellipsis;
   width: 100%;
 
-  &:focus,
+  &:focus, 
   &:hover {
-    color: $dark-shade;
     border: 1px solid $main-shade;
+    color: $dark-shade;
     outline: none;
-    transition-duration: 3s;
   }
 
   &::placeholder {
@@ -29,14 +28,13 @@
   }
 
   &_masked {
-    &:focus,
+    &:focus, 
     &:hover {
-      color: $dark-shade;
       border: 1px solid $main-shade;
+      color: $dark-shade;
       outline: none;
-      transition-duration: 0.3s;
     }
-
+  
     &::placeholder {
       color: $light-shade;
     }
@@ -45,15 +43,14 @@
   &_theme {
     &_dark {
       color: $dark-shade;
-
+    
       &::placeholder {
         color: $dark-shade;
       }
-
-      &:focus,
+    
+      &:focus, 
       &:hover {
         border: 1px solid $light-shade;
-        transition-duration: 0.3s;
       }
     }
   }
@@ -62,7 +59,7 @@
     cursor: pointer;
   }
 
-  &_with-padding-on-right {
-    padding-right: 2.375rem;
+  &_with-right-padding {
+    padding-right: 38px;
   }
 }

@@ -2,22 +2,22 @@ import "inputmask/dist/jquery.inputmask.min";
 
 class TextInput {
   constructor(container) {
-    const isThatElement = $(container).hasClass("js-text-input");
+    const isElement = $(container).hasClass("js-text-input");
 
-    if (isThatElement) {
-      this.textInput = $(container);
+    if (isElement) {
+      this.$textInput = $(container);
     } else {
-      this.textInput = $(container).find("input.js-input");
-    }
-
+      this.$textInput = $(container).find("input.js-text-input");
+    } 
+    
     this.setMasks();
   }
 
   setMasks() {
-    const isMaskedTextInput = this.textInput.hasClass("text-input_masked");
+    const isMaskedTextInput = this.$textInput.hasClass("text-input_masked");
 
     if (isMaskedTextInput) {
-      this.textInput.inputmask({
+      this.$textInput.inputmask({
         alias: "datetime",
         inputFormat: "dd.mm.yyyy",
         placeholder: "ДД.ММ.ГГГГ",
@@ -26,17 +26,17 @@ class TextInput {
   }
 
   getElement() {
-    return this.textInput;
+    return this.$textInput;
   }
 
-  eventListenerBind(type, fn) {
-    if (this.textInput) {
-      this.textInput.on(type, fn);
-    }
+  addEventListener(type, fn) {
+    if (this.$textInput) {
+      this.$textInput.on(type, fn);
+    } 
   }
 
-  setPaddingOnRight() {
-    this.textInput.addClass("text-input_with-padding-on-right");
+  setRightPadding() {
+    this.$textInput.addClass("text-input_with-right-padding");
   }
 }
 

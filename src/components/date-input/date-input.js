@@ -1,33 +1,32 @@
 import TextInput from "../text-input/text-input";
 
 class DateInput {
-  constructor(container, type) {
-    this.container = container;
+  constructor($container, type) {
+    this.$container = $container;
     this.type = type;
-    this.setDOMElements();
+
+    this.setDOMElement();
     this.setPadding();
   }
 
-  setDOMElements() {
-    this.dateInputContainer = this.container.find(
-      `.js-date-input__field-${this.type}-date`
+  setDOMElement() {
+    this.$dateInputContainer = this.$container.find(
+      `.js-date-input__input-${this.type}-date`
     );
-    this.textInput = new TextInput(this.dateTextInputContainer);
-    this.dateInput = this.textInput.getElement();
+    this.textInput = new TextInput(this.$dateTextInputContainer);
+    this.$dateInput = this.textInput.getElement();
   }
 
   getElement() {
-    return this.dateInput;
+    return this.$dateInput;
   }
 
-  eventListenerBind(type, fn) {
-    if (this.dateInput) {
-      this.textInput.eventListenerBind(type, fn);
-    } 
+  addEventListener(type, fn) {
+    if (this.$dateInput) this.textInput.addEventListener(type, fn);
   }
 
   setPadding() {
-    this.textInput.setPaddingOnRight();
+    this.textInput.setRightPadding();
   }
 }
 

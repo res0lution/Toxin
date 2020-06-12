@@ -1,10 +1,10 @@
-option-button {
+.option-button {
   cursor: pointer;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  font-size: 0.75rem;
-  user-select: none;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 0.86rem;
   font-weight: bold;
   text-transform: uppercase;
+  user-select: none; 
 
   &__apply {
     color: $purple;

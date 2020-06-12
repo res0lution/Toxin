@@ -1,9 +1,10 @@
 class DropdownOption {
   constructor(container) {
     this.container = container;
+
     this.getHTMLElements();
     this.getValues();
-    this.bindEventListeners();
+    this.addEventListeners();
   }
 
   getHTMLElements() {
@@ -30,9 +31,14 @@ class DropdownOption {
 
   getValues() {
     this.value = parseInt(this.number.textContent, 10);
-    
-    if (this.value === "") this.value = 0;
-    if (this.value > 0) this.activateMinus();
+
+    if (this.value === "") {
+      this.value = 0;
+    }
+
+    if (this.value > 0) {
+      this.activateMinus();
+    }
 
     if (this.option.hasAttribute("data-group")) {
       const { group } = this.option.dataset;
@@ -43,11 +49,12 @@ class DropdownOption {
     }
   }
 
-  bindEventListeners() {
+  addEventListeners() {
     this.minusButton.addEventListener(
       "click",
       this.handleMinusButtonClick.bind(this)
     );
+
     this.plusButton.addEventListener(
       "click",
       this.handlePlusButtonClick.bind(this)
@@ -80,6 +87,7 @@ class DropdownOption {
 
     this.value += 1;
     this.number.textContent = this.value;
+
     this.container.dispatchEvent(
       new CustomEvent("changeOption", {
         bubbles: true,

@@ -9,7 +9,8 @@ mixin dropdown-option({ text = "Option", number = 0, group, } = {})
 
   section.dropdown-option.js-dropdown-option(data-group=group)
     .dropdown-option__title.js-dropdown-option__title
-      +title({ text, type: "h3", })
+      +title({ text, tag: "h3", })
+
     .dropdown-option__container
       .dropdown-option__circle.js-dropdown-option__circle.dropdown-option__circle_inactive -
       .dropdown-option__number.js-dropdown-option__number=number

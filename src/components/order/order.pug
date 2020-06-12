@@ -4,40 +4,34 @@ include ../button/button.pug
 include ../info-table/info-table.pug
 include ../title/title.pug
 
-mixin order({ 
-  name="order", 
-  action="/mock-address/change-me", 
-  method="get", 
-  currency = '₽', 
-  inTime = 'в сутки', 
-  typeOfRoom = 'люкс', 
-  roomPrice = '9 990', 
-  roomNumber = '888', 
-} = {})
+mixin order({ name="order", action="/mock-address/change-me", method="get", currency = "₽", inTime = "в сутки", type = "luxe", price = "9 990", roomNumber = "888", } = {})
   form.order(name=name action=action method=method)
     .order__wrapper
       .order__title
         p.order__row
           span.order__no № 
           span.order__number=roomNumber
-          span.order__type=` ${typeOfRoom}`
+          span.order__type=` ${type}`
+
         p.order__row.order__row_with-margin
-          span.order__price=roomPrice
+          span.order__price=price
           span.order__price=currency
           span.order__in-time=` ${inTime}`
 
       .order__dropdown-date
-        +filter-date({ inputFieldType: 'range', firstHeader: 'Прибытие', secondHeader: 'Выезд', })
+        +filter-date({ inputType: "range", firstHeader: "Прибытие", secondHeader: "Выезд", })
+
       .order__dropdown
-        +heading({ type: 'h3', text: 'Гости', })
+        +title({ tag: "h3", text: "Гости", })
+
         .order__dropdown-container
           +dropdown({ 
-            text: 'Сколько гостей',
+            text: "Сколько гостей",
             hasButtons: true,
             options: [
-              { text: 'взрослые', group: 'гости' },
-              { text: 'дети', group: 'гости' },
-              { text: 'младенцы' },
+              { text: "взрослые", group: "гости" },
+              { text: "дети", group: "гости" },
+              { text: "младенцы" },
             ],
           })
 
@@ -45,8 +39,8 @@ mixin order({
         +info-table({ currency, })
 
       .order__button
-        +button({
-          styleType: 'long', 
-          text: 'Забронировать',
+        +button({ 
+          text: "Забронировать",
           buttonType: 'submit',
+          style: "long",
         })

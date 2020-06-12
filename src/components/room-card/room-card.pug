@@ -1,17 +1,6 @@
 include ../rating-button/rating-button.pug
 
-mixin room-card({ 
-  roomNumber = 888, 
-  src = "img/rooms/room888.svg",
-  price = "9 900",
-  name = "room photo",  
-  rate = 5, 
-  reviews = 145,
-  type = "",
-  hasArrow = false
-  currency = "₽", 
-  inTime = "в сутки", 
-} = {})
+mixin room-card({ roomNumber = 888, src = "img/rooms/room888.svg",price = "9 900",name = "room photo",  rate = 5, reviews = 145,type = "",hasArrow = falsecurrency = "₽", inTime = "в сутки", } = {})
   section.room-card.js-room-card
     figure.room-card__slider.js-room-card__slider(class=hasArrows ? "room-card__slider_with-arrows" : null)
       img(class="room-card__image" src=src alt=name)

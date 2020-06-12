@@ -7,7 +7,7 @@
     background: none;
     color: $purple;
     cursor: pointer;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-style: normal;
     font-size: 0.86rem;
     font-weight: bold;
@@ -52,38 +52,38 @@
     max-width: 320px;
     padding: 19px;
     width: max-content;
-  
-    .datepicker {  
+
+    .datepicker {
       &--pointer {
         display: none;
       }
-  
+
       &--nav {
         border: none;
         padding-bottom: 10px;
         width: 100%;
-  
+
         &-title {
           color: $the-darkest-shade;
-          font-family: 'Quicksand', 'Open Sans', Arial, Helvetica, sans-serif;
+          font-family: "Quicksand", "Open Sans", Arial, Helvetica, sans-serif;
           font-size: 1.4rem;
           font-weight: bold;
           line-height: 1.71rem;
           text-align: center;
-  
+
           i {
             color: inherit;
           }
-  
+
           &:hover {
             background: none;
           }
         }
       }
-  
+
       &--day-name {
         color: $purple;
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
         font-size: 0.86rem;
         height: 38px;
         line-height: 1.41rem;
@@ -92,17 +92,17 @@
 
       &--cells-days {
         display: grid;
-        grid-template-columns: repeat(7, auto); 
+        grid-template-columns: repeat(7, auto);
       }
-  
+
       &--cell-day {
         align-items: center;
         border: none;
         box-sizing: border-box;
         background: none;
         color: $main-shade;
-        display: flex ;
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        display: flex;
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
         font-size: 0.86rem;
         justify-content: center;
         height: 38px;
@@ -111,34 +111,46 @@
         padding: 0;
         width: 38px;
 
-        @media (max-width: 380px) {    
+        @media (max-width: 380px) {
           height: 30px;
           width: 30px;
         }
-  
+
         &.-other-month- {
           color: $light-shade;
         }
-  
+
         &.-current- {
-          background: linear-gradient(180deg, $green 0%, $gradient-end-green 100%);
+          background: linear-gradient(
+            180deg,
+            $green 0%,
+            $gradiend-end-green 100%
+          );
           border-radius: 50%;
           color: #fff;
         }
-  
+
         &.-selected- {
-          background: linear-gradient(180deg, $purple 0%, $gradient-end-purple 100%);
+          background: linear-gradient(
+            180deg,
+            $purple 0%,
+            $gradiend-end-purple 100%
+          );
           border-radius: 50%;
           color: #fff;
           position: relative;
         }
-  
+
         &.-in-range- {
           color: $main-shade;
-  
+
           &::after {
-            background: linear-gradient(180deg, $purple 0%, $gradient-end-purple 100%);
-            content: '';
+            background: linear-gradient(
+              180deg,
+              $purple 0%,
+              $gradiend-end-purple 100%
+            );
+            content: "";
             display: block;
             height: 100%;
             opacity: 0.15;
@@ -149,11 +161,15 @@
             width: 100%;
           }
         }
-  
+
         &.-range-from-::after {
-          background: linear-gradient(180deg, $purple 0%, $gradient-end-purple 100%);
+          background: linear-gradient(
+            180deg,
+            $purple 0%,
+            $gradiend-end-purple 100%
+          );
           border-radius: 50% 0 0 50%;
-          content: '';
+          content: "";
           display: block;
           height: 100%;
           left: 0;
@@ -163,11 +179,15 @@
           right: 0;
           width: 100%;
         }
-  
+
         &.-range-to-::after {
-          background: linear-gradient(180deg, $purple 0%, $gradient-end-purple 100%);
+          background: linear-gradient(
+            180deg,
+            $purple 0%,
+            $gradiend-end-purple 100%
+          );
           border-radius: 0 50% 50% 0;
-          content: '';
+          content: "";
           display: block;
           height: 100%;
           opacity: 0.15;
@@ -177,14 +197,18 @@
           right: 0;
           width: 100%;
         }
-  
+
         &:hover {
           color: #fff;
-          background: linear-gradient(180deg, $green 0%, $gradient-end-green 100%);
+          background: linear-gradient(
+            180deg,
+            $green 0%,
+            $gradiend-end-green 100%
+          );
           border-radius: 50%;
         }
       }
-  
+
       &--buttons {
         align-items: center;
         border: unset;
@@ -193,25 +217,25 @@
         padding: 0;
         width: 100%;
       }
-  
+
       &--button {
         cursor: pointer;
         color: $main-shade;
         display: inline-block;
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
         font-size: 0.86rem;
         font-weight: bold;
         height: min-content;
         max-width: min-content;
         text-transform: uppercase;
         text-align: left;
-        user-select: none; 
-  
+        user-select: none;
+
         &:hover {
           background: none;
         }
       }
-  
+
       &--nav-action {
         &:hover {
           background: none;

@@ -21,5 +21,5 @@ importAll(require.context("./", true, /\.(js)$/));
 importAll(require.context("../components", true, /\.(js)$/));
 
 importAll(
-  require.context("../static/", true, /\.(svg|png|ico|xml|json)$/)
+  require.context("../static", true, /\.(svg|png|ico|xml|json)$/)
 );

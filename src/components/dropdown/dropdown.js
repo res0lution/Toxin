@@ -2,16 +2,17 @@ import DropdownOption from "../dropdown-option/dropdown-option";
 import OptionButton from "../option-button/option-button";
 
 class Dropdown {
-  constructor(htmlElem, titleCases) {
-    this.dropdown = htmlElem;
+  constructor(elem, titleCases) {
+    this.dropdown = elem;
     this.options = [];
     this.titleCases = titleCases;
+
     this.init();
   }
 
   init() {
     this.getHTMLElements();
-    this.bindEventListeners();
+    this.addEventListeners();
     this.setOptions();
     this.selectText = this.select.textContent;
     this.setSelectText(this.selectText);
@@ -22,12 +23,16 @@ class Dropdown {
     this.clearButton = new OptionButton("clear", this.dropdown);
     this.applyButton = new OptionButton("apply", this.dropdown);
 
-    if (!this.clearButton.getButton()) this.clearButton = null;
+    if (!this.clearButton.getButton()) {
+      this.clearButton = null;
+    } 
 
-    if (!this.applyButton.getButton()) this.applyButton = null;
+    if (!this.applyButton.getButton()) {
+      this.applyButton = null;
+    } 
   }
 
-  bindEventListeners() {
+  addEventListeners() {
     this.select.addEventListener("click", this.handleSelectClick.bind(this));
     this.dropdown.addEventListener(
       "changeOption",
@@ -50,10 +55,12 @@ class Dropdown {
   setOptions() {
     const optionsList = this.dropdown.querySelectorAll(".js-dropdown__option");
 
-    optionsList.forEach((currentOption) => {
-      const newOption = new DropdownOption(currentOption);
+    optionsList.forEach((option) => {
+      const newOption = new DropdownOption(option);
       const desiredOption = this.options.find((optionIterationItem) => {
-        if (optionIterationItem.group === newOption.group) return true;
+        if (optionIterationItem.group === newOption.group) {
+          return true;
+        } 
 
         return false;
       });
@@ -73,6 +80,7 @@ class Dropdown {
 
   calculateSelectText() {
     let summaryText = "";
+
     summaryText = this.options.map((option, item) => {
       const groupName = option.group.toLowerCase();
       let groupValue = 0;
@@ -81,7 +89,9 @@ class Dropdown {
         groupValue += parseInt(val.value, 10);
       });
 
-      if (groupValue === 0 && item !== 0) return "";
+      if (groupValue === 0 && item !== 0) {
+        return "";
+      } 
 
       const cases = this.checkPad(groupValue);
       const isTitlesAvailable =
@@ -92,13 +102,13 @@ class Dropdown {
       if (!isTitlesAvailable) {
         return ` ${groupValue} ${groupName}`;
       }
-      
+
       const groupText = this.titleCases[groupName][cases];
 
       return ` ${groupValue} ${groupText}`;
     });
-    summaryText = summaryText.filter((entry) => entry.trim() !== "");
 
+    summaryText = summaryText.filter((entry) => entry.trim() !== "");
     let finalText = "";
 
     summaryText.forEach((item, i) => {
@@ -125,7 +135,6 @@ class Dropdown {
     const dropdown = this.select.parentNode;
     const selectOptions = dropdown.querySelector(".js-dropdown__options");
     selectOptions.classList.add("dropdown__options_active");
-
     this.handleDocumentClick = this.handleDocumentClick.bind(this);
     document.addEventListener("click", this.handleDocumentClick);
   }
@@ -148,11 +157,15 @@ class Dropdown {
   }
 
   activateClear() {
-    if (this.clearButton) this.clearButton.show();
+    if (this.clearButton) {
+      this.clearButton.show();
+    } 
   }
 
   deactivateClear() {
-    if (this.clearButton) this.clearButton.hide();
+    if (this.clearButton) {
+      this.clearButton.hide();
+    } 
   }
 
   handleClearButtonClick() {
@@ -163,7 +176,6 @@ class Dropdown {
     });
 
     this.deactivateClear();
-
     if (this.selectText) {
       this.setSelectText(this.selectText);
     } else {
@@ -197,11 +209,12 @@ class Dropdown {
       tmp = 1;
     } else {
       tmp = 2;
-    }
-    
+    } 
+
     if (isNumBetweenNineAndTwentyOne) {
       tmp = 2;
     }
+    
     return tmp;
   }
 }

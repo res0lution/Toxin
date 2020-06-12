@@ -12,17 +12,20 @@ mixin dropdown({ text, options = [], hasButtons = false, width, } = {})
   section.dropdown.js-dropdown(class=widthModifier)
     .dropdown__arrow
       +icons({
-        type: "keyboard_arrow_down", 
-        color: "dark shade",
+        icon: "keyboard_arrow_down", 
+        color: "dark",
       })
+
     .dropdown__select.js-dropdown__select
       span.dropdown__select-text=text
+
     .dropdown__options.js-dropdown__options
       each option in options
         - const { text, group, number } = option
         .dropdown__option.js-dropdown__option
           +dropdown-option({ text, group, number })
+
       if hasButtons
         .dropdown__option-button
-          +option-button({ type: "clear", text: "Очистить", isHidden: true, })
-          +option-button({ text: "apply", text: "Применить", })
+          +option-button({ type: "clear", text: 'Очистить', isHidden: true, })
+          +option-button({ type: "apply", text: 'Применить', })

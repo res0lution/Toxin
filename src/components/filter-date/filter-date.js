@@ -10,7 +10,7 @@ class FilterDate {
   }
 
   findDOMElements() {
-    this.input = new DateTe(this.$calendar, "entire");
+    this.input = new DateInput(this.$calendar, "entire");
     this.$input = this.input.getElement();
     this.isRange = false;
 

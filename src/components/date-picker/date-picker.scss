@@ -34,7 +34,6 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
-    /* Support for IE. */
 
     &_color {
       &_purple {
@@ -134,7 +133,7 @@
           background: linear-gradient(
             180deg,
             $purple 0%,
-            $gradiend-end-purple 100%
+            #8baaf9 100%
           );
           border-radius: 50%;
           color: #fff;

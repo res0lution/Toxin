@@ -1,13 +1,13 @@
 .title {
   color: $the-darkest-shade;
-  font-family: 'Quicksand', 'Open Sans', Arial, sans-serif;
+  font-family: "Quicksand", "Open Sans", Arial, sans-serif;
   font-weight: bold;
   margin: 0;
 
   &_type {
     &_h1 {
-      font-size: 1.72rem;
-      line-height: 2.14rem;
+      font-size: 1.6rem;
+      line-height: 2rem;
     }
 
     &_h2 {
@@ -15,8 +15,8 @@
     }
 
     &_h3 {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-size: 0.86rem;
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 0.76rem;
       text-transform: uppercase;
     }
   }
@@ -27,8 +27,8 @@
     }
   }
 
-  &_weight{
-    &_normal{
+  &_weight {
+    &_normal {
       font-weight: normal;
     }
   }

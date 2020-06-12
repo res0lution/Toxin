@@ -1,6 +1,6 @@
-include ../heading/heading.pug
+include ../title/title.pug
 
-mixin info-table({ priceOfRoom = "price", totalPriceOfRoom = 'sum price', numberOfDays = 'number days', numberOfDiscount = 'number discount', inTime = 'суток', priceOfService = 'Service price', priceOfAdditionalServices = 'adv serv price', finalPrice = 'final price', currency = '₽', } = {})
+mixin info-table({ priceOfRoom = "price", totalPriceOfRoom = "sum price", numberOfDays = "number days", numberOfDiscount = "number discount", inTime = "суток", priceOfService = "Service price", priceOfAdditionalServices = "adv serv price", finalPrice = "final price", currency = "₽", } = {})
   table.info-table.js-info-table
     tr.info-table__row
       td.info-table__service
@@ -8,9 +8,11 @@ mixin info-table({ priceOfRoom = "price", totalPriceOfRoom = 'sum price', number
         span.info-table__currency=`${currency} x `
         span.js-info-table__number-of-days=numberOfDays
         span.info-table__in-time=` ${inTime}`
+
       td.info-table__price
         span.js-info-table__total-price-of-rooms=totalPriceOfRoom
         span.info-table__currency=currency
+
     tr.info-table__row
       td.info-table__service
         .info-table__discount
@@ -18,23 +20,28 @@ mixin info-table({ priceOfRoom = "price", totalPriceOfRoom = 'sum price', number
           span.js-info-table__number-of-discount=numberOfDiscount
           span.info-table__currency=currency
           span.info-table__icon i
+
       td.info-table__price
         .info-table__discount-price
           span.js-info-table__price-of-service=priceOfService
           span.info-table__currency=currency
+
     tr.info-table__row
       td.info-table__service
         .info-table__additional
           span.info-table__additional Сбор за дополнительные услуги
           span.info-table__icon i
+
       td.info-table__price
         .info-table__additional-price
           span.js-info-table__price-of-additional-services=priceOfAdditionalServices
           span.info-table__currency=currency
+
     tr.info-table__row
       td.info-table__service.info-table__service_with-result
-        +heading({ type: 'h2', text: 'Итого', }) 
+        +title({ tag: "h2", text: "Итого", }) 
         .info-table__underline
+
       td.info-table__price.info-table__price_with-result.js-info-table__final-price
-        +heading({ type: 'h2', text: finalPrice, }) 
-        +heading({ type: 'h2', text: currency, }) 
+        +title({ tag: "h2", text: finalPrice, }) 
+        +title({ tag: "h2", text: currency, }) 

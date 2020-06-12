@@ -5,9 +5,9 @@
   box-sizing: border-box;
   color: $light-shade;
   display: inline-block;
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  font-size: $main-font-size;
-  line-height: 3rem;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 0.86rem;
+  line-height: 2.5rem;
   max-width: 320px;
   padding-bottom: 0;
   padding-left: 15px;
@@ -16,7 +16,7 @@
   text-overflow: ellipsis;
   width: 100%;
 
-  &:focus, 
+  &:focus,
   &:hover {
     border: 1px solid $main-shade;
     color: $dark-shade;
@@ -28,13 +28,13 @@
   }
 
   &_masked {
-    &:focus, 
+    &:focus,
     &:hover {
       border: 1px solid $main-shade;
       color: $dark-shade;
       outline: none;
     }
-  
+
     &::placeholder {
       color: $light-shade;
     }
@@ -43,12 +43,12 @@
   &_theme {
     &_dark {
       color: $dark-shade;
-    
+
       &::placeholder {
         color: $dark-shade;
       }
-    
-      &:focus, 
+
+      &:focus,
       &:hover {
         border: 1px solid $light-shade;
       }

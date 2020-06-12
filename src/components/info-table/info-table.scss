@@ -25,17 +25,17 @@
     border: 1px solid $light-shade;
     border-radius: 50%;
     box-sizing: border-box;
-    display: flex;
     color: $light-shade;
-    height: 20px;
+    display: flex;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-size: 12px;
     font-weight: bold;
-    line-height: 14px;
+    font-size: 0.86rem;
+    height: 20px;
+    line-height: 1rem;
     justify-content: center;
     position: absolute;
-    right: 0;
     top: 14px;
+    right: 0;
     width: 20px;
   }
 
@@ -55,10 +55,10 @@
   }
 
   &__row {
-    color: $dark-shade;
+    color: rgba(31, 32, 65, 0.75);
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: $main-font-size;
     font-weight: normal;
     margin: 0;
   }
@@ -74,13 +74,13 @@
   }
 
   &__underline {
+    bottom: 5px;
     border-top: 1px dotted $light-shade;
     box-sizing: border-box;
-    bottom: 5px;
-    height: 1px;
     left: 60px;
     position: absolute;
-    width: 100%;
     max-width: 180px;
+    height: 1px;
+    width: 100%;
   }
 }

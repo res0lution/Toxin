@@ -40,13 +40,13 @@ class Dropdown {
     );
 
     if (this.clearButton)
-      this.clearButton.eventListenerBind(
+      this.clearButton.addEventListener(
         "click",
         this.handleClearButtonClick.bind(this)
       );
 
     if (this.applyButton)
-      this.applyButton.eventListenerBind(
+      this.applyButton.addEventListener(
         "click",
         this.handleApplyButtonClick.bind(this)
       );

@@ -7,7 +7,7 @@
   cursor: pointer;
   display: block;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  font-size: 0.86rem;
+  font-size: 0.76rem;
   font-weight: bold;
   height: max-content;
   min-width: 99px;
@@ -16,6 +16,7 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  transition-duration: 0.3s;
   width: max-content;
   user-select: none;
 
@@ -67,7 +68,8 @@
     padding: 2px;
     width: max-content;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: linear-gradient(
         180deg,
         rgba(188, 156, 255, 0.5) 0%,
@@ -92,7 +94,8 @@
     position: relative;
     width: 100%;
 
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: 0.5;
     }
   }
@@ -107,7 +110,8 @@
     padding-right: 0;
     padding-left: 0;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $main-shade;
     }
   }
@@ -115,7 +119,8 @@
   &_simple {
     color: #fff;
 
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: 0.5;
     }
   }

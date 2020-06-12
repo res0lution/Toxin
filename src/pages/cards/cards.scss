@@ -3,8 +3,8 @@
   background: #f4f4f6;
   display: flex;
   justify-content: center;
-  padding-bottom: 140px;
-  padding-top: 150px;
+  padding-bottom: 7em;
+  padding-top: 9.5em;
 
   &__inner {
     display: flex;
@@ -18,7 +18,7 @@
   &__column {
     display: flex;
     flex-direction: column;
-    margin-right: 40px;
+    margin-right: 4.2em;
 
     &:last-of-type{
       margin-right: 0;
@@ -39,7 +39,7 @@
   }
 
   &__logo-ui-kit {
-    left: 30px;
+    left: 68px;
     position: absolute;
     top: 30px;
   }

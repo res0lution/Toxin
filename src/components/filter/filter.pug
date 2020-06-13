@@ -10,7 +10,7 @@ mixin filter({ name="filter", action="/mock-address/change-me", method="get", } 
         +title({ tag: "h1", text: "Найдём номера под ваши пожелания", })
 
       .filter__dropdown-date
-        +filter-date({ inputType: "range", firstHeader: "Прибытие", secondHeader: "Выезд", })
+        +filter-date({ inputFieldType: "range", firstHeader: "Прибытие", secondHeader: "Выезд", })
 
       .filter__dropdown
         +title({ tag: "h3", text: "Гости", })

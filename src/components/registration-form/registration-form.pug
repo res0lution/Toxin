@@ -2,7 +2,7 @@ include ../radio-button/radio-button.pug
 include ../toggle-button/toggle-button.pug
 include ../button/button.pug
 include ../title/title.pug
-include ../text-input/text-input.pug
+include ../text-field/text-field.pug
 
 mixin registration-form({ action="/mock-address/change-me", name="registration-form", method="post", } = {} )
   form.registration-form(action=action name=name method=method)
@@ -11,14 +11,14 @@ mixin registration-form({ action="/mock-address/change-me", name="registration-f
         +title({ tag: "h1", text: "Регистрация аккаунта", })
 
       .registration-form__first-name
-        +text-input({
+        +text-field({
           type: "text",
           name: "first-name",
           placeholder: "Имя",
         })
 
       .registration-form__second-name
-        +text-input({
+        +text-field({
           type: "text",
           name: "second-name",
           placeholder: "Фамилия",
@@ -35,7 +35,7 @@ mixin registration-form({ action="/mock-address/change-me", name="registration-f
         +title({ tag: "h3", text: "Дата рождения", })
       
       .registration-form__birthday
-        +text-input({
+        +text-field({
           placeholder: "ДД.ММ.ГГГГ",
           isMasked: true,
         })
@@ -44,14 +44,14 @@ mixin registration-form({ action="/mock-address/change-me", name="registration-f
         +title({ tag: "h3", text: "Данные для входа в сервис", })
 
       .registration-form__email
-        +text-input({
+        +text-field({
           type: "email",
           name: "email",
           placeholder: "Email",
         })
 
       .registration-form__password
-        +text-input({
+        +text-field({
           type: "password",
           name: "password",
           placeholder: "Пароль",

@@ -1,4 +1,4 @@
-.date-picker {
+.date-picker-calendar {
   left: 0;
   position: absolute;
   top: 0;
@@ -130,11 +130,7 @@
         }
 
         &.-selected- {
-          background: linear-gradient(
-            180deg,
-            $purple 0%,
-            #8baaf9 100%
-          );
+          background: linear-gradient(180deg, $purple 0%, #8baaf9 100%);
           border-radius: 50%;
           color: #fff;
           position: relative;
@@ -198,13 +194,13 @@
         }
 
         &:hover {
-          color: #fff;
           background: linear-gradient(
             180deg,
             $green 0%,
             $gradiend-end-green 100%
           );
           border-radius: 50%;
+          color: #fff;
         }
       }
 

@@ -1,7 +1,7 @@
 import "air-datepicker/dist/css/datepicker.min.css";
 import "air-datepicker";
 
-class DatePicker {
+class DatePickerCalendar {
   constructor(datepicker, $containerOfTargetBlock) {
     this.datepickerPluginInstance = datepicker;
     this.$containerOfTargetBlock = $containerOfTargetBlock;
@@ -14,10 +14,10 @@ class DatePicker {
     this.initLanguage();
     this.addCustomClass();
     this.createApplyButton();
-    this.addEventListeners();
-    this.removeTitleComma();
+    this.bindEventListeners();
+    this.removeCommaFromTitle();
     this.replaceNavArrows();
-    this.replaceCalendar();
+    this.replaceCalendarToBlock();
   }
 
   findDOMElements() {
@@ -26,9 +26,9 @@ class DatePicker {
     this.$title = this.$datepicker.find(".datepicker--nav-title");
   }
 
-  replaceCalendar() {
+  replaceCalendarToBlock() {
     this.$datepickerContainer = this.$containerOfTargetBlock.find(
-      ".date-picker"
+      ".date-picker-calendar"
     );
 
     if (this.$datepickerContainer.length > 0) {
@@ -53,11 +53,11 @@ class DatePicker {
     this.$buttonsContainer = this.$datepicker.find(".datepicker--buttons");
     this.$applyButton = $("<span>", {
       text: this.applyButtonText,
-      class: "date-picker__apply-button",
+      class: "date-picker-calendar__apply-button",
     }).appendTo(this.$buttonsContainer);
   }
 
-  addEventListeners() {
+  bindEventListeners() {
     this.$applyButton.on("click", this.handleApplyButtonClick.bind(this));
 
     $(window).on("resize", this.handleWindowResize.bind(this));
@@ -114,10 +114,11 @@ class DatePicker {
       timeFormat: "hh:ii",
       firstDay: 1,
     };
+
     this.setApplyButtonText("Применить");
   }
 
-  removeTitleComma() {
+  removeCommaFromTitle() {
     this.$calendarInput.datepicker({
       navTitles: {
         days: "MM <i>yyyy</i>",
@@ -128,17 +129,17 @@ class DatePicker {
   replaceNavArrows() {
     this.$calendarInput.datepicker({
       nextHtml:
-        `<i class="date-picker__icon date-picker__icon_color_purple">arrow_forward</i>`,
+        '<i class="date-picker-calendar__material-icon date-picker-calendar__material-icon_color_purple">arrow_forward</i>',
       prevHtml:
-        `<i class="date-picker__icon date-picker__icon_color_purple">arrow_back</i>`,
+        '<i class="date-picker-calendar__material-icon date-picker-calendar__material-icon_color_purple">arrow_back</i>',
     });
   }
 
   addCustomClass() {
     this.$calendarInput.datepicker({
-      classes: "date-picker__inner",
+      classes: "date-picker-calendar__inner",
     });
   }
 }
 
-export default DatePicker;
+export default DatePickerCalendar;

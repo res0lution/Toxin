@@ -1,5 +1,5 @@
 include ../title/title.pug
-include ../text-input/text-input.pug
+include ../text-field/text-field.pug
 include ../button/button.pug
 
 mixin sign-in-form({ name="registration", action="/mock-address/change-me", method="post", } = {})
@@ -9,14 +9,14 @@ mixin sign-in-form({ name="registration", action="/mock-address/change-me", meth
         +title({ tag: "h1", text: "Войти", })
 
       .sign-in-form__email
-        +text-input({
+        +text-field({
           type: "email",
           name: "email",
           placeholder: "Email",
         })
 
       .sign-in-form__password
-        +text-input({
+        +text-field({
           type: "password",
           name: "password",
           placeholder: "Пароль",

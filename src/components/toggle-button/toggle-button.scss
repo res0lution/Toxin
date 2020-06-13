@@ -9,7 +9,7 @@
     cursor: pointer;
     display: inline-block;
     font-family: "Montserrat", Arial, sans-serif;
-    font-size: $main-font-size;
+    font-size: 0.86rem;
     margin-left: 10px;
     vertical-align: middle;
     white-space: pre-wrap;
@@ -35,6 +35,7 @@
     border-radius: 50%;
     display: inline-block;
     height: 12px;
+    margin-bottom: 0.2em;
     vertical-align: middle;
     width: 12px;
   }

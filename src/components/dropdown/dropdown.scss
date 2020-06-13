@@ -23,8 +23,8 @@
   &__option-button {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 13px;
-    padding-top: 19px;
+    padding-bottom: 1em;
+    padding-top: 1.3em;
   }
 
   &__options {
@@ -39,8 +39,8 @@
     height: 0;
     max-width: 320px;
     position: absolute;
-    padding-left: 15px;
-    padding-right: 7px;
+    padding-left: 1em;
+    padding-right: 0.6em;
     width: 100%;
     z-index: 10;
 
@@ -63,7 +63,7 @@
     height: max-content;
     line-height: 2.6rem;
     position: relative;
-    padding-left: 15px;
+    padding-left: 1.15em;
     user-select: none;
 
     &_active {
@@ -81,13 +81,13 @@
     &__options {
       height: auto;
       min-width: 266px;
-      padding-bottom: 8px;
+      padding-bottom: .3em;
     }
 
     &__select {
       min-width: 266px;
       margin: 0;
-      padding-right: 90px;
+      padding-right: 6em;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;

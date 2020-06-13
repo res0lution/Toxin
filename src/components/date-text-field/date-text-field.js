@@ -1,4 +1,4 @@
-import TextField from "../text-field/text-field";
+import TextField from '../text-field/text-field';
 
 class DateTextField {
   constructor($container, type) {
@@ -10,9 +10,7 @@ class DateTextField {
   }
 
   setDOMElements() {
-    this.$dateTextFieldContainer = this.$container.find(
-      `.js-date-text-field__input-${this.type}-date`
-    );
+    this.$dateTextFieldContainer = this.$container.find(`.js-date-text-field__input-${this.type}-date`);
     this.textField = new TextField(this.$dateTextFieldContainer);
     this.$dateTextField = this.textField.getElement();
   }

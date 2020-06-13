@@ -12,7 +12,7 @@ class TextField {
 
   setMasks() {
     const isMaskedTextField = this.$textField.hasClass("text-field_masked");
-    
+
     if (isMaskedTextField) {
       this.$textField.inputmask({
         alias: "datetime",

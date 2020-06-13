@@ -15,7 +15,7 @@
   }
 
   &__birthday-title {
-    margin-top: 22px;
+    margin-top: 1.2em;
   }
 
   &__login-data-title {
@@ -26,14 +26,14 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 1.75em;
   }
 
   &__login-text {
     color: #000;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-size: $main-font-size;
+    font-size: 0.86rem;
     font-weight: normal;
     line-height: 1.3rem;
   }
@@ -51,7 +51,7 @@
   }
 
   &__radio-button {
-    margin-right: 20px;
+    margin-right: 1.46em;
   }
 
   &__email {
@@ -75,7 +75,7 @@
   }
 
   &__wrapper {
-    padding: calc(40px - 1px) calc(30px - 1px) calc(30px - 1px) calc(30px - 1px);
+    padding: 2.2em 1.9em;
   }
 
   @media (max-width: 380px) {

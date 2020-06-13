@@ -114,7 +114,6 @@ class DatePickerCalendar {
       timeFormat: "hh:ii",
       firstDay: 1,
     };
-
     this.setApplyButtonText("Применить");
   }
 

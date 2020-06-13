@@ -10,7 +10,7 @@ mixin date-text-field({ header = "date dropdown", type = "start", placeholder, w
       - widthModifier = "date-text-field__input_width_wide"
 
   .date-text-field
-    +title({ tag: "h3", text: header, })
+    +title({ type: "h3", text: header, })
 
     .date-text-field__input(class = widthModifier)
       .date-text-field__keyboard-arrow

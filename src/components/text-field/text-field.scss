@@ -7,19 +7,19 @@
   display: inline-block;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 0.86rem;
-  line-height: 2.5rem;
+  line-height: 2.6rem;
   max-width: 320px;
-  padding-bottom: 0;
-  padding-left: 15px;
-  padding-top: 0;
   position: relative;
+  padding-left: 1.15em;
+  padding-top: 0;
+  padding-bottom: 0;
   text-overflow: ellipsis;
   width: 100%;
 
   &:focus,
   &:hover {
-    border: 1px solid $main-shade;
     color: $dark-shade;
+    border: 1px solid $main-shade;
     outline: none;
   }
 
@@ -30,8 +30,8 @@
   &_masked {
     &:focus,
     &:hover {
-      border: 1px solid $main-shade;
       color: $dark-shade;
+      border: 1px solid $main-shade;
       outline: none;
     }
 
@@ -59,7 +59,7 @@
     cursor: pointer;
   }
 
-  &_with-right-padding {
-    padding-right: 38px;
+  &_with-padding-on-right {
+    padding-right: 3em;
   }
 }

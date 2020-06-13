@@ -9,11 +9,11 @@
     cursor: pointer;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-size: 0.86rem;
+    font-size: 0.76rem;
     font-weight: bold;
-    line-height: 1.1rem;
-    text-transform: uppercase;
+    line-height: 1rem;
     text-align: right;
+    text-transform: uppercase;
     outline: none;
     user-select: none;
   }
@@ -23,7 +23,7 @@
     display: inline-block;
     font-family: "Material Icons";
     font-style: normal;
-    font-size: 1.71rem;
+    font-size: 2rem;
     font-weight: normal;
     line-height: 1;
     letter-spacing: normal;
@@ -49,7 +49,7 @@
     flex-direction: column;
     justify-content: center;
     max-width: 320px;
-    padding: 19px;
+    padding: 1.5em;
     width: max-content;
 
     .datepicker {
@@ -59,15 +59,15 @@
 
       &--nav {
         border: none;
-        padding-bottom: 10px;
+        padding-bottom: 0.5em;
         width: 100%;
 
         &-title {
           color: $the-darkest-shade;
           font-family: "Quicksand", "Open Sans", Arial, Helvetica, sans-serif;
-          font-size: 1.4rem;
+          font-size: 1.2rem;
           font-weight: bold;
-          line-height: 1.71rem;
+          line-height: 2rem;
           text-align: center;
 
           i {
@@ -84,8 +84,8 @@
         color: $purple;
         font-family: "Montserrat", Arial, Helvetica, sans-serif;
         font-size: 0.86rem;
+        line-height: 1rem;
         height: 38px;
-        line-height: 1.41rem;
         width: 38px;
       }
 
@@ -97,17 +97,17 @@
       &--cell-day {
         align-items: center;
         border: none;
-        box-sizing: border-box;
         background: none;
+        box-sizing: border-box;
         color: $main-shade;
         display: flex;
         font-family: "Montserrat", Arial, Helvetica, sans-serif;
-        font-size: 0.86rem;
+        font-size: 0.76rem;
         justify-content: center;
         height: 38px;
-        line-height: 1.41rem;
-        margin: 0;
+        line-height: 1rem;
         padding: 0;
+        margin: 0;
         width: 38px;
 
         @media (max-width: 380px) {
@@ -130,7 +130,11 @@
         }
 
         &.-selected- {
-          background: linear-gradient(180deg, $purple 0%, #8baaf9 100%);
+          background: linear-gradient(
+            180deg,
+            $purple 0%,
+            $gradiend-end-purple 100%
+          );
           border-radius: 50%;
           color: #fff;
           position: relative;
@@ -167,8 +171,8 @@
           content: "";
           display: block;
           height: 100%;
-          left: 0;
           opacity: 0.15;
+          left: 0;
           position: absolute;
           top: 0;
           right: 0;
@@ -185,8 +189,8 @@
           content: "";
           display: block;
           height: 100%;
-          opacity: 0.15;
           left: 0;
+          opacity: 0.15;
           position: absolute;
           top: 0;
           right: 0;
@@ -208,7 +212,7 @@
         align-items: center;
         border: unset;
         justify-content: space-between;
-        margin-top: 20px;
+        margin-top: 1.5em;
         padding: 0;
         width: 100%;
       }
@@ -218,12 +222,12 @@
         color: $main-shade;
         display: inline-block;
         font-family: "Montserrat", Arial, Helvetica, sans-serif;
-        font-size: 0.86rem;
+        font-size: 0.76rem;
         font-weight: bold;
         height: min-content;
         max-width: min-content;
-        text-transform: uppercase;
         text-align: left;
+        text-transform: uppercase;
         user-select: none;
 
         &:hover {

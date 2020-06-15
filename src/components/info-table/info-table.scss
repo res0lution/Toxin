@@ -10,7 +10,7 @@
   &__additional-price {
     padding-top: 5px;
   }
-  
+
   &__discount {
     padding-top: 5px;
     padding-right: 20px;
@@ -19,7 +19,7 @@
   &__discount-price {
     padding-top: 5px;
   }
-  
+
   &__icon {
     align-items: center;
     border: 1px solid $light-shade;
@@ -27,7 +27,7 @@
     box-sizing: border-box;
     color: $light-shade;
     display: flex;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 0.86rem;
     height: 20px;
@@ -41,7 +41,7 @@
 
   &__price {
     padding-bottom: 0;
-    padding-top: 10px;
+    padding-top: 0.7em;
     text-align: end;
     vertical-align: top;
     width: 25%;
@@ -56,16 +56,16 @@
 
   &__row {
     color: rgba(31, 32, 65, 0.75);
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-size: $main-font-size;
+    font-size: 0.88rem;
     font-weight: normal;
     margin: 0;
   }
 
   &__service {
     position: relative;
-    padding-top: 10px;
+    padding-top: 0.75em;
     width: 75%;
 
     &_with-result {

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const values = {
     priceOfRoom: "9 990",
     numberOfDays: 4,
-    summaryPriceOfRooms: "39 960",
+    totalPriceOfRooms: "39 960",
     numberOfDiscount: "2 179",
     priceOfService: 0,
     priceOfAdditionalServices: 300,

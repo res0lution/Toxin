@@ -12,7 +12,7 @@
   width: 100%;
 
   &__button {
-    margin-top: 19px;
+    margin-top: 1.2em;
   }
 
   &__dropdown {
@@ -30,11 +30,11 @@
   &__in-time {
     color: $main-shade;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: 0.86rem;
+    font-size: 0.76rem;
   }
 
   &__info-table {
-    margin-top: 10px;
+    margin-top: 0.7em;
   }
 
   &__no {
@@ -47,14 +47,14 @@
   &__number {
     color: $the-darkest-shade;
     font-family: "Quicksand", "Open Sans", Arial, sans-serif;
-    font-size: 1.71rem;
+    font-size: 1.61rem;
     font-weight: bold;
   }
 
   &__price {
     color: $main-shade;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: $main-font-size;
+    font-size: 0.86rem;
     font-weight: bold;
   }
 
@@ -76,13 +76,13 @@
   &__type {
     color: $purple;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: 0.86rem;
+    font-size: 0.76rem;
     font-weight: bold;
     text-transform: uppercase;
   }
 
   &__wrapper {
-    padding: calc(40px - 1px) calc(30px - 1px) calc(30px - 1px) calc(30px - 1px);
+    padding: 2.2em 1.7em 1.6em 1.7em;
   }
 
   @media (max-width: 380px) {

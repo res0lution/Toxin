@@ -4,7 +4,7 @@ include ../button/button.pug
 include ../info-table/info-table.pug
 include ../title/title.pug
 
-mixin order({ name="order", action="/mock-address/change-me", method="get", currency = "₽", inTime = "в сутки", type = "luxe", price = "9 990", roomNumber = "888", } = {})
+mixin order({ name="order", action="/mock-address/change-me", method="get", currency = "₽", inTime = "в сутки", type = "люкс", price = "9 990", roomNumber = "888", } = {})
   form.order(name=name action=action method=method)
     .order__wrapper
       .order__title
@@ -19,7 +19,7 @@ mixin order({ name="order", action="/mock-address/change-me", method="get", curr
           span.order__in-time=` ${inTime}`
 
       .order__dropdown-date
-        +filter-date({ inputType: "range", firstHeader: "Прибытие", secondHeader: "Выезд", })
+        +filter-date({ inputFieldType: "range", firstHeader: "Прибытие", secondHeader: "Выезд", })
 
       .order__dropdown
         +title({ tag: "h3", text: "Гости", })

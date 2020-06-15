@@ -18,10 +18,10 @@
   &__column {
     display: flex;
     flex-direction: column;
-    margin-right: 2.2em;
+    margin-right: 2.25em;
 
     &:last-of-type{
-      margin-right: 3.2em;
+      margin-right: 3em;
     }
   
     @media (max-width: 1115px) {

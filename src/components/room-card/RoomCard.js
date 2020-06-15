@@ -3,21 +3,21 @@ import "slick-carousel/slick/slick-theme.scss";
 import "slick-carousel/slick/slick.scss";
 
 class RoomCard {
-  constructor(card) {
-    this.$roomCard = $(card);
+  constructor(preview) {
+    this.$roomPreview = $(preview);
     this.hasArrows = false;
 
-    this.findDOMElement();
+    this.findDOMElements();
     this.checkArrows(this.$slider);
     this.initSlider();
   }
 
-  findDOMElement() {
-    this.$slider = this.$roomCard.find(".js-room-card__slider");
+  findDOMElements() {
+    this.$slider = this.$roomPreview.find(".js-room-card__slider");
   }
 
-  checkArrows(slider) {
-    if ($(slider).hasClass("room-card__slider_with-arrows")) {
+  checkArrows(element) {
+    if ($(element).hasClass("room-card__slider_with-arrows")) {
       this.hasArrows = true;
     }
   }
@@ -26,7 +26,7 @@ class RoomCard {
     this.$slider.slick({
       dots: true,
       infinite: true,
-      speed: 350,
+      speed: 300,
       slidesToShow: 1,
       arrows: this.hasArrows,
       useCSS: false,

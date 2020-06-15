@@ -1,13 +1,13 @@
 include ../icons/icons.pug
 
-mixin rating-button({ name = "rate-button", rating = 5, } = {})
+mixin rating-button({ name = "rating-button", rating = 5, } = {})
   - let i = 0
 
   span.rating-button.js-rating-button
     while i < 5
       label.rating-button__label.js-rating-button__label
         +icons({
-          symbol: "star_border", 
+          icon: "star_border", 
           color: "purple",
         })
         

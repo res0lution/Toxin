@@ -11,21 +11,21 @@
   width: 100%;
 
   &__button {
-    margin-top: 19px;
+    margin-top: 1.2em;
   }
 
   &__login {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 29px;
+    margin-top: 1.9em;
   }
 
   &__login-text {
     color: #000;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-size: $main-font-size;
+    font-size: 0.86rem;
     font-weight: normal;
     line-height: 1.3rem;
   }
@@ -39,10 +39,10 @@
   }
 
   &__wrapper {
-    padding: calc(40px - 1px) calc(30px - 1px) calc(30px - 1px) calc(30px - 1px);
+    padding: 2.4em 1.7em 1.6em 1.7em;
   }
 
-  @media (max-width: 380px) {    
+  @media (max-width: 380px) {
     min-width: 310px;
     width: min-content;
   }

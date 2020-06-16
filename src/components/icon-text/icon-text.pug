@@ -1,10 +1,10 @@
-include ../material-icons/material-icons.pug
+include ../icons/icons.pug
 
 mixin icon-text({ image = 'insert_emoticon', title = 'Комфорт', description = 'Шумопоглощающие стены', hasUnderline = false, } = {})
   section.icon-text
     .icon-text__row
       .icon-text__image
-        +material-icons({
+        +icons({
           type: image, 
           color: 'purple-gradient',
           size: 'large',

@@ -1,0 +1,13 @@
+include ../icons/icons.pug
+
+mixin like-button({ likesNumber = 0, isChecked = false, } = {})
+  if likesNumber < 0
+    - likesNumber = 0
+  .like-button.js-like-button(data-stage = `${isChecked}`)
+    .like-button__heart.js-like-button__heart
+      +icons({
+        icon: 'favorite_border', 
+        color: 'light',
+        size: 'small',
+      })
+    span.like-button__label.js-like-button__label=likesNumber

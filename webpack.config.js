@@ -140,6 +140,11 @@ module.exports = (env, options) => {
         filename: "./colors-and-type.html",
         template: "./src/pages/colors-and-type/colors-and-type.pug",
       }),
+
+      new HtmlWebpackPlugin({
+        filename: "./form-elements.html",
+        template: "./src/pages/form-elements/form-elements.pug",
+      }),
     ],
   };
 };

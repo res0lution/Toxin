@@ -1,0 +1,49 @@
+extends ../index
+
+block variables
+  - let pageTitle = "Colors & Type"
+
+block content
+  include ../../components/logo-ui-kit/logo-ui-kit.pug
+  include ../../components/title/title.pug
+  include ../../components/color-block/color-block.pug
+
+  .colors-and-type
+    .colors-and-type__container
+      .colors-and-type__logo-ui-kit
+        +logo-ui-kit()
+
+      section.colors-and-type__colors
+        +color-block({ text: "Dark Shade 100%", description: "#1F2041", color: "darkest shade", })
+        +color-block({ text: "Dark Shade 75%", description: "#1F2041", color: "dark shade", })
+        +color-block({ text: "Dark Shade 50%", description: "#1F2041", color: "shade", })
+        +color-block({ text: "Dark Shade 25%", description: "#1F2041", color: "light shade", })
+        +color-block({ text: "Dark Shade 5%", description: "#1F2041", color: "lightest shade", })
+        +color-block({ text: "Purple", description: "#BC9CFF", color: "purple", })
+        +color-block({ text: "Green", description: "#6FCF97", color: "green", })
+
+      section.colors-and-type__titles
+        .colors-and-type__item
+          .colors-and-type__title
+            +title({ tag: "h1", text: 'H1', color: "light", weight: "normal", })
+
+          .colors-and-type__text 
+            +title({ tag: "h1", text: "This one is the sub-section or widget title" })
+
+        .colors-and-type__item
+          .colors-and-type__title
+            +title({ tag: "h2", text: "H2", color: "light", weight: "normal", })
+              
+          .colors-and-type__text 
+            +title({ tag: "h2", text: "Next one is the item title inside widgets" })
+
+        .colors-and-type__item
+          .colors-and-type__title
+            +title({ tag: "h3", text: "H3", color: "light", weight: "normal", })
+
+          .colors-and-type__text 
+            +title({ tag: "h3", text: "This is a label or CTA text", })
+
+        .colors-and-type__item
+          p.colors-and-type__title-body Body
+          p.colors-and-type__text-body This is the body text which is used for most of the design, like paragraphs, lists, etc.

@@ -8,6 +8,6 @@ mixin title({ tag = "h3", text = "Header text", color, weight, } = {})
   
   case weight
     when "normal"
-      - weightModifier = " heading_weight_normal"
+      - weightModifier = " title_weight_normal"
 
   #{tag}.title(class = `title_type_${tag}${colorModifier}${weightModifier}`)=text

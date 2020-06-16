@@ -1,0 +1,64 @@
+.color-block {
+  display: flex;
+  max-width: 270px;
+
+  &__rect {
+    border-radius: 6px;
+    height: 70px;
+    width: 70px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2.6em;
+  }
+
+  &__title {
+    color: $the-darkest-shade;
+    font-family: "Quicksand", "Open Sans", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.15rem;
+    line-height: 1.75rem;
+    margin: 0;
+  }
+
+  &__description {
+    color: $the-darkest-shade;
+    font-family: "Quicksand", "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    margin: 0;
+  }
+
+  &_color {
+    &_darkest-shade {
+      background: $the-darkest-shade;
+    }
+
+    &_dark-shade {
+      background: $dark-shade;
+    }
+
+    &_shade {
+      background: $main-shade;
+    }
+
+    &_light-shade {
+      background: $light-shade;
+    }
+
+    &_lightest-shade {
+      background: $the-lightest-shade;
+    }
+
+    &_purple {
+      background: $purple;
+    }
+
+    &_green {
+      background: $green;
+    }
+  }
+}

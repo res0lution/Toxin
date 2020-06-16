@@ -135,6 +135,11 @@ module.exports = (env, options) => {
         filename: "./cards.html",
         template: "./src/pages/cards/cards.pug",
       }),
+
+      new HtmlWebpackPlugin({
+        filename: "./colors-and-type.html",
+        template: "./src/pages/colors-and-type/colors-and-type.pug",
+      }),
     ],
   };
 };

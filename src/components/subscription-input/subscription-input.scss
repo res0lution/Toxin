@@ -1,6 +1,6 @@
 .subscription-input {
-  position: relative;
   max-width: 267px;
+  position: relative;
 
   &__arrow {
     align-items: center;
@@ -8,7 +8,7 @@
     cursor: pointer;
     display: flex;
     height: 44px;
-    font-size: 1rem;
+    font-size: 0.86rem;
     line-height: 1rem;
     justify-content: center;
     position: absolute;
@@ -24,9 +24,9 @@
     color: $light-shade;
     display: inline-block;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: 1rem;
+    font-size: 0.86rem;
     line-height: 42px;
-    padding-left: 1.2rem;
+    padding-left: 0.8rem;
     padding-top: 0;
     padding-bottom: 0;
     position: relative;

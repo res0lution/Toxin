@@ -33,6 +33,6 @@ mixin button({ href = "/mock-address/change-me", style = "simple", text = "butto
           })
     when "faint"
       .button.button_faint(class=sizeModifier)
-        #{tag}(class='button__key' type=typeModifier href=href)=text
+        #{tag}(class="button__key" type=typeModifier href=href)=text
     default
-      #{tag}(class=`button button_${styleType}` class=sizeModifier type=typeModifier href=href)=text
+      #{tag}(class=`button button_${style}` class=sizeModifier type=typeModifier href=href)=text

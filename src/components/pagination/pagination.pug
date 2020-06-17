@@ -4,21 +4,25 @@ mixin pagination({ startNumber = 1, endNumber = 12, allNumbers = "100+", descrip
   ul.pagination
     each link, i in links
       - const { href, isActive, number, } = link
+
       if i === links.length-1
         li.pagination__item
           .pagination__ellipsis ...
+        
       li.pagination__item
-        a.pagination__link(href=href, class= isActive ? "pagination__link_active" : null)=number      
+        a.pagination__link(href=href, class= isActive ? "pagination__link_active" : null)=number  
+
     li.pagination__item.pagination__item_next
-      a.pagination__pagination__link_next(href="/address/need/change/")
+      a.pagination__link_next(href="/address/need/change/")
         +icons({
-          type: "arrow_forward", 
+          icon: "arrow_forward", 
           color: "white",
         })
+
     p.pagination__description 
       span.pagination__start-number=startNumber
-      span=' – '
+      span=" – "
       span.pagination__end-number=endNumber
-      span=' из '
+      span=" из "
       span.pagination__all-numbers=allNumbers
       span.pagination__description-text=` ${descriptionText}`

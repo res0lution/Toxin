@@ -1,13 +1,15 @@
 include ../like-button/like-button.pug
 
-mixin comment({ avatarSourceLink = './img/avatar1.png', likesNumber = 5, authorName = 'Имя пользователя', date = 'сегодня', text = 'Отзыв', } = {})
+mixin comment({ avatarLink = "./img/avatar-1.png", likes = 5, author = "Имя пользователя", date = "сегодня", text = "Отзыв", } = {})
   section.comment
     .comment__avatar-container
       .comment__avatar
-        img(class='comment__avatar' src=avatarSourceLink)
+        img(class="comment__avatar" src=avatarLink)
+
       .comment__like-button
-        +like-button({ likesNumber, })
+        +like-button({ likesNumber: likes, })
+
     .comment__body-container
-      .comment__name=authorName
+      .comment__name=author
       .comment__date=date
       .comment__text=text

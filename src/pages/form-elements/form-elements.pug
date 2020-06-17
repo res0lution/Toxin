@@ -83,7 +83,7 @@ block content
             +title({ tag: "h3", text: "checkbox buttons", })
 
           .form-elements__checkbox-button
-            +checkbox-input({ name: "checkbox-0", text: "Можно курить", })
+            +checkbox-input({ name: "checkbox0", text: "Можно курить", })
           .form-elements__checkbox-button
             +checkbox-input({ name: "checkbox1", text: "Можно с питомцами", })
           .form-elements__checkbox-button
@@ -91,7 +91,7 @@ block content
 
         .form-elements__wrapper
           .form-elements__title
-            +title({ tag: "h3", text: "radio button", })
+            +title({ tag: "h3", text: "radio buttons", })
 
           .form-elements__radio-buttons
             .form-elements__radio-button
@@ -101,13 +101,14 @@ block content
 
         .form-elements__wrapper
           .form-elements__title
-            +title({ tag: "h3", text: "toggle button", })
+            +title({ tag: "h3", text: "toggle", })
 
           +toggle-button({ name: "toggle", text: "Получать спецпредложения", })
 
         .form-elements__wrapper
           .form-elements__title
             +title({ tag: "h3", text: "like button", })
+
           +like-button({ likesNumber: 2 })
 
           .form-elements__like-button
@@ -121,6 +122,20 @@ block content
 
           .form-elements__rate-button
             +rating-button({ name: "rate-02", rating: 5, })
+
+        .form-elements__wrapper
+          .form-elements__title
+            +title({ type: "h3", text: "dropdown", })
+          
+            +dropdown({ 
+              text: "Сколько гостей",
+              hasButtons: true,
+              options: [
+                { text: "взрослые", group: "гости", },
+                { text: "дети", group: "гости", },
+                { text: "младенцы", },
+              ],
+            })
 
       section.form-elements__buttons
         .form-elements__wrapper
@@ -204,8 +219,6 @@ block content
               ["checkbox6", "Кроватка"],
               ["checkbox7", "Телевизор"],
               ["checkbox8", "Шампунь"],
-              ["checkbox9", "Телевизор"],
-              ["checkbox10", "Шампунь"]
             ],
           })
 
@@ -229,7 +242,7 @@ block content
       section.form-elements__middle-dropdown
         .form-elements__wrapper
           .form-elements__title
-            +title({ tag: "h3", text: "rich-checkbox", })
+            +title({ tag: "h3", text: "rich-checkbox buttons", })
 
           +checkbox-input({ 
             name: "checkbox-13", 
@@ -259,9 +272,9 @@ block content
       section.form-elements__comments
         .form-elements__wrapper
           +comment({
-            avatarSourceLink: "./img/avatar1.png", 
-            likesNumber: 11, 
-            authorName: "Мурад Сарафанов", 
+            avatarLink: "./img/avatar-1.png", 
+            likes: 11, 
+            author: "Мурад Сарафанов", 
             date: "5 дней назад", 
             text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
           })

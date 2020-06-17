@@ -1,24 +1,24 @@
 .icon-text {
   display: flex;
   flex-direction: column;
-  max-width: 291px;
+  max-width: 290px;
   margin: 0;
 
   &__description {
-    margin: 0;
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
     color: $dark-shade;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: normal;
+    font-size: 0.86rem;
+    line-height: 1.5rem;
+    margin: 0;
   }
 
   &__image {
     display: flex;
     align-items: center;
     text-align: center;
-    line-height: 41px;
-    padding-right: 10px;
+    line-height: 3rem;
+    padding-right: 0.5em;
   }
 
   &__row {
@@ -26,19 +26,19 @@
   }
 
   &__title {
-    margin: 0;
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 24px;
     color: $dark-shade;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.86rem;
+    line-height: 1.5rem;
+    margin: 0;
   }
 
   &__underline {
-    margin-top: 20px;
+    background: rgba(31, 32, 65, 0.1);
+    height: 1px;
+    margin-top: 1.2em;
     max-width: 280px;
     width: 100%;
-    height: 1px;
-    background: rgba(31, 32, 65, 0.1);
   }
 }

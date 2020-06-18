@@ -12,25 +12,26 @@ mixin footer({ description = "Description", titleOfBlockSubscribe = "Subscribe",
           li.footer__item
             .footer__logo
               +logo()
+
           li.footer__item
             p.footer__description=description
         
         .footer__menu
           each menu in menus
-            - const { title, links, extraModifier } = menu
+            - const { title, links } = menu
             +vertical-menu({ 
               links,
-              title: title, 
-              extraModifier
+              title: title
             })
 
         ul.footer__list.footer__subscription
           li.footer__item
-            +title({ type: "h3", text: titleOfBlockSubscribe, })
+            +title({ tag: "h3", text: titleOfBlockSubscribe, })
           li.footer__item
             p.footer__description=descriptionOfBlockSubscribe
           li.footer__item
             .footer__subscription-input
               +subscription-input({ placeholder: emailInputPlaceholder, })
+
     section.footer__copyright     
       +copyright({ text: textOfCopyrightBlock, })

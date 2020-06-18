@@ -10,11 +10,13 @@ mixin links-list({ links = [], gapBetweenElements, } = {})
   ul.links_list(class=gapModifier)
     each link in links
       - const { isDropdown, isActive, href = "/address/need/change", text = "click me" } = link
+
       li.links_list__item(class=isDropdown ? "links_list__item_with-dropdown" : null)
         a.links_list__link(href=href class=isActive ? "links_list__link_active" : null)=text
+
         if isDropdown
           .links_list__arrow-down
             +icons({
-              type: "keyboard_arrow_down", 
+              icon: "keyboard_arrow_down", 
               color: "shade",
             })

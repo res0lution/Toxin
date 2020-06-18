@@ -10,9 +10,9 @@
   font-size: 0.76rem;
   font-weight: bold;
   height: max-content;
-  min-width: 99px;
+  min-width: 100px;
   min-height: 44px;
-  padding: 1.2em 0.7em;
+  padding: 1.2em 1.4em;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -78,7 +78,7 @@
     }
 
     &.button_size_narrow {
-      min-width: 79px;
+      min-width: 80px;
       padding: 0.1em;
 
       & .button__key {
@@ -128,14 +128,14 @@
   &_size {
     &_small {
       min-height: 34px;
-      min-width: 79px;
+      min-width: 80px;
     }
 
     &_narrow {
-      min-width: 79px;
+      min-width: 80px;
       min-height: 34px;
-      padding-top: 0.4em;
-      padding-bottom: 0.4em;
+      padding-top: 0.8em;
+      padding-bottom: 0.6em;
     }
   }
 }

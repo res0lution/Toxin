@@ -3,10 +3,10 @@ include ../button/button.pug
 include ../icons/icons.pug
 include ../links-list/links-list.pug
 
-mixin nav-bar({ isLoggedIn = true, userName = "Cosmin Negoita", links = [], loginButtonText = "Login", registerButtonText = "Register", gapBetweenElements, } = {})
+mixin nav-bar({ isLoggedIn = true, userName = "Юлий Цезарь", links = [], loginButtonText = "Войти", registerButtonText = "Зарегистрироваться", gapBetweenElements, } = {})
   - let gapModifier
 
-  case indentBetweenElements
+  case gapBetweenElements
     when "large"
       - gapModifier = "nav-bar__list_indent_large"
 
@@ -14,23 +14,26 @@ mixin nav-bar({ isLoggedIn = true, userName = "Cosmin Negoita", links = [], logi
   header.nav-bar
     nav.nav-bar__inner
       +logo()
+
       .nav-bar__menu
         .nav-bar__list(class=gapModifier)
           +links-list({ links, gapBetweenElements, })
+
         if !isLoggedIn
           .nav-bar__login
-            +button({
-              styleType: "faint", 
+            +button({ 
               href: "/address/need/change", 
               text: loginButtonText, 
               size: "narrow",
+              style: "faint",
             })
+
           .nav-bar__register
-            +button({
-              styleType: "simple", 
+            +button({ 
               href: "/address/need/change", 
               text: registerButtonText, 
               size: "narrow",
+              style: "simple",
             })
         else
           .nav-bar__vertical-line

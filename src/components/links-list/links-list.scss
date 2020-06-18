@@ -8,16 +8,16 @@ $column-max-width: 780px;
 
   @media (max-width: $column-max-width) {
     flex-direction: column;
-    padding: 10px 0;
+    padding: 0.4em 0;
   }
 
   &_indent {
     &_large {
       .links_list__item {
-        margin-right: 30px;
+        margin-right: 1.4em;
 
         &_dropdown {
-          margin-right: 20px;
+          margin-right: 1em;
         }
       }
     }
@@ -57,8 +57,8 @@ $column-max-width: 780px;
   &__link {
     color: $main-shade;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 70px;
+    font-size: 0.86rem;
+    line-height: 4.45rem;
     position: relative;
     text-decoration: none;
 

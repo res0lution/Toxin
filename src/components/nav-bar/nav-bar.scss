@@ -23,16 +23,16 @@ $column-max-width: 780px;
 
     @media (max-width: $column-max-width) {
       flex-direction: column;
-      padding: 0.625rem 0;
+      padding: 0.625em 0;
     }
   }
 
   &__login {
-    margin-right: 1.8rem;
+    margin-right: 1.5em;
 
     @media (max-width: $column-max-width) {
       margin-right: 0;
-      margin-top: 0.3rem;
+      margin-top: 0.3em;
     }
   }
 
@@ -46,11 +46,11 @@ $column-max-width: 780px;
   }
 
   &__list {
-    margin-right: 1.8rem;
+    margin-right: 1.2em;
 
     &_indent {
       &_large {
-        margin-right: 1.875rem;
+        margin-right: 1.5em;
       }
     }
 
@@ -60,22 +60,22 @@ $column-max-width: 780px;
   }
 
   &__register {
-    margin-right: 0.15rem;
+    margin-right: 0.25em;
 
     @media (max-width: $column-max-width) {
-      margin-top: 0.3rem;
+      margin-top: 0.3em;
     }
   }
 
   &__user-name {
     color: $main-shade;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: $main-font-size;
-    margin-left: 1.875rem;
+    font-size: 0.86rem;
+    margin-left: 1.875em;
 
     @media (max-width: $column-max-width) {
       margin-left: 0;
-      margin-top: 0.625rem;
+      margin-top: 0.625em;
     }
   }
 
@@ -85,7 +85,7 @@ $column-max-width: 780px;
     width: 1px;
 
     @media (max-width: 760px) {
-      margin: 5px 0;
+      margin: 0.4em 0;
     }
   }
 }

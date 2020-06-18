@@ -8,7 +8,7 @@
 
   @media (max-width: 768px) {
     min-height: 520px;
-    padding-top: 2.18rem;
+    padding-top: 2.18em;
   }
 
   &__container {
@@ -20,7 +20,7 @@
   }
 
   &__about-us {
-    margin-right: 2.18rem;
+    margin-right: 2.18em;
 
     @media (max-width: 768px) {
       margin-right: 0;
@@ -31,9 +31,9 @@
     color: $dark-shade;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 0.86rem;
     font-weight: normal;
-    line-height: 1.7rem;
+    line-height: 1.45rem;
     max-width: 260px;
     margin: 0;
     text-align: left;
@@ -55,19 +55,19 @@
     flex-direction: row;
     justify-content: space-between;
     max-width: 1160px;
-    margin: 7.3rem 0.625rem 7.15rem 0.625rem;
+    margin: 6.3em 0.625em 6.3em 0.625em;
     width: 100%;
 
     @media (max-width: 768px) {
       flex-direction: column;
       margin: 0;
-      padding: 1.875rem 0;
+      padding: 1.875em 0;
     }
   }
 
   &__item {
     display: block;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.9em;
     margin-right: 0;
 
     &:last-of-type {
@@ -75,14 +75,14 @@
     }
 
     &_logo {
-      margin-bottom: 0.875rem;
+      margin-bottom: 0.875em;
     }
 
     @media (max-width: 370px) {
       text-align: center;
 
       &:last-of-type {
-        margin-bottom: 1rem;
+        margin-bottom: 1em;
       }
     }
 
@@ -103,12 +103,12 @@
   &__list {
     display: flex;
     flex-direction: column;
-    padding: 0;
     margin: 0;
+    padding: 0;
 
     @media (max-width: 768px) {
       align-items: center;
-      padding-bottom: 0.625rem;
+      padding-bottom: 0.625em;
     }
   }
 
@@ -119,8 +119,8 @@
   &__menu {
     display: flex;
     justify-content: space-around;
-    margin: 0.25rem auto 0 auto;
-    padding-right: 1rem;
+    margin: 0.2em auto 0 auto;
+    padding-right: 1em;
     width: 100%;
 
     @media (max-width: 370px) {
@@ -128,17 +128,17 @@
     }
 
     @media (max-width: 768px) {
-      margin-bottom: 0.875rem;
+      margin-bottom: 0.875em;
       padding: 0;
     }
   }
 
   &__subscription {
-    margin-top: 0.2rem;
+    margin-top: 0.2em;
   }
 
   &__subscription-input {
-    margin-top: 0.6rem;
+    margin-top: 0.6em;
   }
 
   &__copyright {

@@ -1,0 +1,80 @@
+extends ../index
+
+block variables
+  - let pageTitle = "Headers & footers"
+
+block content
+  include ../../components/logo-ui-kit/logo-ui-kit.pug
+  include ../../components/nav-bar/nav-bar.pug
+  include ../../components/footer/footer.pug
+  include ../../components/copyright/copyright.pug
+
+  main.headers-and-footers
+    .headers-and-footers__logo-ui-kit
+      +logo-ui-kit()
+
+    section.headers-and-footers__item
+      +nav-bar({
+        isLoggedIn: false, 
+        links: [
+          { text: "О нас", isActive: true, },
+          { text: "Услуги", isDropdown: true, },
+          { text: "Вакансии" },
+          { text: "Новости", },
+          { text: "Соглашения", isDropdown: true, },
+        ],
+        gapBetweenElements: "large",
+      })
+
+    section.headers-and-footers__item
+      +nav-bar({
+        isLoggedIn: true, 
+        links: [
+          { text: "О нас", isActive: true, },
+          { text: "Услуги", isDropdown: true, },
+          { text: "Вакансии" },
+          { text: "Новости", },
+          { text: "Соглашения", isDropdown: true, },
+        ],
+        gaptBetweenElements: "large",
+      })
+
+    section.headers-and-footers__item
+      +footer( { 
+        description: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", 
+        titleOfBlockSubscribe: "Подписка", 
+        descriptionOfBlockSubscribe: "Получайте специальные предложения и новости сервиса", 
+        emailInputPlaceholder: "Email", 
+        textOfCopyrightBlock: "Copyright © 2018 Toxin отель. Все права зачищены.", 
+        menus: [
+          {
+            title: "Навигация",
+            links: [
+              { text: "О нас", },
+              { text: "Новости", },
+              { text: "Служба поддержки", },
+              { text: "Услуги", },
+            ],
+          },
+          {
+            title: "О нас",
+            links: [
+              { text: "О сервисе", },
+              { text: "Наша команда", },
+              { text: "Вакансии", },
+              { text: "Инвесторы", },
+            ],
+          },
+          {
+            title: "Служба поддержки",
+            links: [
+              { text: "Соглашения", },
+              { text: "Сообщества", },
+              { text: "Связь с нами", },
+            ],
+          },
+        ],
+      })
+      
+    section.headers-and-footers__item
+      +copyright()

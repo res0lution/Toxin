@@ -2,12 +2,12 @@
   &__link {
     color: $main-shade;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: $main-font-size;
+    font-size: 0.86rem;
     line-height: 0;
     position: relative;
     text-decoration: none;
   }
-  //em
+  
   &__list {
     display: flex;
     flex-direction: column;
@@ -16,13 +16,13 @@
 
     @media (max-width: 768px) {
       align-items: center;
-      padding-bottom: 10px;
+      padding-bottom: 0.4em;
     }
   }
 
   &__item {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 1.2em;
     margin-right: 0;
 
     &:last-of-type {
@@ -33,7 +33,7 @@
       text-align: center;
 
       &:last-of-type {
-        margin-bottom: 16px;
+        margin-bottom: 1em;
       }
     }
 

@@ -1,0 +1,19 @@
+.headers-and-footers {
+  background: #f4f4f6;
+  padding-bottom: 130px;
+  padding-top: 8.7em;
+
+  &__item {
+    margin-bottom: 40px;
+    
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__logo-ui-kit {
+    left: 68px;
+    position: absolute;
+    top: 30px;
+  }
+}

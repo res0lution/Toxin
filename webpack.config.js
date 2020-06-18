@@ -145,6 +145,11 @@ module.exports = (env, options) => {
         filename: "./form-elements.html",
         template: "./src/pages/form-elements/form-elements.pug",
       }),
+
+      new HtmlWebpackPlugin({
+        filename: "./headers-and-footers.html",
+        template: "./src/pages/headers-and-footers/headers-and-footers.pug",
+      }),
     ],
   };
 };

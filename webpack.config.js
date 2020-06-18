@@ -6,7 +6,7 @@ const webpack = require("webpack");
 
 module.exports = (env, options) => {
   const isProduction = options.mode === "production";
-  const publicDir = isProduction ? "https://github-pages-here/" : "/";
+  const publicDir = "/";
 
   return {
     entry: `${path.join(__dirname, "./src")}/js`,
@@ -149,6 +149,11 @@ module.exports = (env, options) => {
       new HtmlWebpackPlugin({
         filename: "./headers-and-footers.html",
         template: "./src/pages/headers-and-footers/headers-and-footers.pug",
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: "./landing-page.html",
+        template: "./src/pages/landing-page/landing-page.pug",
       }),
     ],
   };

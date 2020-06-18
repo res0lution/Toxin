@@ -165,6 +165,15 @@ module.exports = (env, options) => {
         filename: "./room-details.html",
         template: "./src/pages/room-details/room-details.pug",
       }),
+
+      new HtmlWebpackPlugin({
+        filename: "./search-room.html",
+        template: "./src/pages/search-room/search-room.pug",
+      }),
+      new HtmlWebpackPlugin({
+        filename: "./sign-in.html",
+        template: "./src/pages/sign-in/sign-in.pug",
+      }),
     ],
   };
 };

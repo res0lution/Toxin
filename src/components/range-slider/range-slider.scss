@@ -9,7 +9,7 @@
   &__price {
     color: $main-shade;
     border: none;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-size: 0.76rem;
     line-height: 1rem;
     max-width: 50%;
@@ -34,7 +34,7 @@
       max-width: 266px;
       width: 100%;
     }
-  
+
     .irs-handle {
       background: linear-gradient(180deg, $green 0%, $gradiend-end-green 100%);
       border: 2px solid #fff;
@@ -45,12 +45,12 @@
       margin-top: -1px;
       outline: none;
       width: 16px;
-  
+
       i {
         display: none;
       }
     }
-  
+
     .irs-bar {
       background: linear-gradient(180deg, $green 0%, $gradiend-end-green 100%);
       border-radius: 3px;

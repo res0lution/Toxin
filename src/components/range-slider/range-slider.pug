@@ -5,6 +5,7 @@ mixin range-slider({ headerText, type = 'double', min = 0, max = 100, step = 1, 
     .range-slider__header
       .range-slider__label
         +title({ tag: "h3", text: headerText, })
+        
       input(type='text' readonly class='range-slider__price js-range-slider__price')
 
     .range-slider__inner

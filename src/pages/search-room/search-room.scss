@@ -39,11 +39,11 @@
   }
 
   &__range-slider-description {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: 0.875rem;
-    line-height: $main-font-size;
     color: $main-shade;
-    margin-top: 0.875rem;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 0.76rem;
+    line-height: 0.86rem;
+    margin-top: 0.4em;
   }
 
   &__title {
@@ -57,7 +57,7 @@
     grid-area: elements;
     grid-column-gap: 0.75rem;
     grid-row-gap: 1.25rem;
-    padding-top: 1.25rem;
+    padding-top: 1.15em;
 
     @media (max-width: 1112px) {
       grid-template-columns: 1fr 1fr;
@@ -74,65 +74,65 @@
   &__pagination {
     justify-self: center;
     grid-area: pagination;
-    margin-left: -0.875rem;
-    padding-top: 2.75rem;
+    margin-left: -0.875em;
+    padding-top: 2.75em;
   }
 
   &__filter-date {
-    margin-top: 0.3125rem;
+    margin-top: 0.3125em;
   }
 
   &__dropdown-guests-title {
-    margin-top: 1.25rem;
+    margin-top: 1.25em;
   }
 
   &__dropdown-guests {
-    margin-top: 0.3125rem;
+    margin-top: 0.3125em;
   }
 
   &__range-slider {
-    margin-top: 1.875rem;
+    margin-top: 1.65em;
   }
-  &__checkbox-inputss-title {
-    margin-top: 1.875rem;
+  &__checkbox-inputs-title {
+    margin-top: 1em;
   }
 
-  &__checkbox-inputss {
-    margin-top: 1rem;
+  &__checkbox-inputs {
+    margin-top: 1em;
   }
 
   &__checkbox-input {
-    margin-top: 0.625rem;
+    margin-top: 0.625em;
   }
 
   &__rich-checkbox-title {
-    margin-top: 1.875rem;
+    margin-top: 1.875em;
   }
 
   &__rich-checkbox {
-    margin-top: 1rem;
+    margin-top: 1em;
   }
 
   &__rich-checkbox-second {
-    margin-top: 0.5rem;
+    margin-top: 0.5em;
   }
   &__rich-checkbox-title {
-    margin-top: 1.875rem;
+    margin-top: 1.875em;
   }
 
   &__dropdown-furniture-title {
-    margin-top: 1.875rem;
+    margin-top: 1.875em;
   }
 
   &__dropdown-furniture {
-    margin-top: 0.5rem;
+    margin-top: 0.25em;
   }
 
   &__rich-expandable-checkbox {
-    margin-top: 0.75rem;
+    margin-top: 0.75em;
   }
 
   &__rich-dropdown-checkbox {
-    margin-top: 0.625rem;
+    margin-top: 0.625em;
   }
 }

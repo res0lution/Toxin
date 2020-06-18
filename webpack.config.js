@@ -155,6 +155,11 @@ module.exports = (env, options) => {
         filename: "./landing-page.html",
         template: "./src/pages/landing-page/landing-page.pug",
       }),
+
+      new HtmlWebpackPlugin({
+        filename: "./registration.html",
+        template: "./src/pages/registration/registration.pug",
+      }),
     ],
   };
 };

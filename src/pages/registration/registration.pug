@@ -1,11 +1,11 @@
 extends ../layout
 
 block variables
-    - let pageTitle = "Registration"
+  - let pageTitle = "Registration"
 
 block content
-    include ../../components/registration-form/registration-form.pug
+  include ../../components/registration-form/registration-form.pug
 
-    main.registration
-      section.registration__container
-        +registration-form()
+  main.registration
+    section.registration__container
+      +registration-form()

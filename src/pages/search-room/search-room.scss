@@ -10,7 +10,7 @@
     max-width: 1160px;
     margin-left: auto;
     margin-right: auto;
-    padding: 1.875rem 0.625rem 4.75rem 0.625rem;
+    padding: 1.875em 0.625em 4.75em 0.625em;
     width: min-content;
 
     @media (min-width: 550px) and (max-width: 1160px) {
@@ -19,10 +19,10 @@
 
     @media (max-width: 550px) {
       display: grid;
-      justify-content: center;
       grid-template-columns: 266px;
       grid-template-rows: auto auto auto auto auto auto;
       grid-template-areas: "side-bar" "side-bar" "side-bar" "title" "elements" "pagination";
+      justify-content: center;
     }
   }
 

@@ -160,6 +160,11 @@ module.exports = (env, options) => {
         filename: "./registration.html",
         template: "./src/pages/registration/registration.pug",
       }),
+
+      new HtmlWebpackPlugin({
+        filename: "./room-details.html",
+        template: "./src/pages/room-details/room-details.pug",
+      }),
     ],
   };
 };

@@ -1,4 +1,4 @@
-.donut-chart {
+.circle-chart {
   display: inline-block;
 
   &__pie {
@@ -7,18 +7,18 @@
 
   &__text {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 0.76rem;
     font-weight: bold;
-    line-height: 15px;
+    line-height: 1rem;
     text-transform: uppercase;
   }
 
   &__value {
     font-family: 'Quicksand', 'Open Sans', Arial, Helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 1.6rem;
     font-style: normal;
     font-weight: bold;
-    line-height: 30px;
+    line-height: 1.7rem;
     text-transform: uppercase;
   }
 

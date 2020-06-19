@@ -3,8 +3,7 @@
 
 ## Introduction 🔈
 
-E-commerce crwn is an online fashion store.
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Toxin is a test task for fsd
 
 ## Features ⚡️
 

@@ -48,7 +48,7 @@
 
     &:checked {
       ~ .checkbox-input__flag {
-        border: 1px solid $purple;
+        border: 1px solid $primary;
         content: url("./img/check-box.svg");
         line-height: $main-font-size;
       }

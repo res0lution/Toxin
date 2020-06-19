@@ -1,5 +1,5 @@
 .button {
-  background: linear-gradient(180deg, $purple 0%, $gradiend-end-purple 100%);
+  background: linear-gradient(180deg, $primary 0%, $gradiend-end-primary 100%);
   border-radius: 22px;
   border: none;
   box-sizing: border-box;
@@ -40,7 +40,7 @@
     border-radius: 22px;
     border: none;
     box-sizing: border-box;
-    color: $purple;
+    color: $primary;
     cursor: pointer;
     display: block;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
@@ -103,7 +103,7 @@
   &_no-frame {
     background: none;
     box-sizing: border-box;
-    color: $purple;
+    color: $primary;
     height: auto;
     max-width: max-content;
     min-width: max-content;

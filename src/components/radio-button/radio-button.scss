@@ -33,14 +33,14 @@
 
     &:checked {
       ~ .radio-button__circle {
-        border: 1px solid $purple;
+        border: 1px solid $primary;
       }
 
       ~ .radio-button__circle > .radio-button__thumb {
         background: linear-gradient(
           180deg,
-          $purple 0%,
-          $gradiend-end-purple 100%
+          $primary 0%,
+          $gradiend-end-primary 100%
         );
         margin-bottom: 0.18em;
       }

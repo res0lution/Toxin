@@ -19,7 +19,7 @@
     &_next {
       align-items: center;
       border-radius: 50%;
-      background: linear-gradient(180deg, $green 0%, $gradiend-end-green 100%);
+      background: linear-gradient(180deg, $secondary 0%, $gradiend-end-secondary 100%);
       color: #fff;
       display: inline-flex;
       justify-content: center;
@@ -56,7 +56,7 @@
     width: 40px;
 
     &:hover {
-      background: linear-gradient(180deg, $green 0%, $gradiend-end-green 100%);
+      background: linear-gradient(180deg, $secondary 0%, $gradiend-end-secondary 100%);
       border-radius: 22px;
       color: #fff;
       text-decoration: none;
@@ -65,17 +65,17 @@
     &_active {
       background: linear-gradient(
         180deg,
-        $purple 0%,
-        $gradiend-end-purple 100%
+        $primary 0%,
+        $gradiend-end-primary 100%
       );
       color: #fff;
       text-decoration: none;
     }
 
     &_next {
-      border-radius: 50%;
       align-items: center;
-      background: linear-gradient(180deg, $green 0%, $gradiend-end-green 100%);
+      border-radius: 50%;
+      background: linear-gradient(180deg, $secondary 0%, $gradiend-end-secondary 100%);
       color: #fff;
       display: flex;
       justify-content: center;

@@ -46,15 +46,15 @@
     width: 0;
 
     &:checked ~ .toggle-button__slider {
-      border: 1px solid $purple;
+      border: 1px solid $primary;
       text-align: right;
     }
 
     &:checked ~ .toggle-button__slider > .toggle-button__circle {
       background: linear-gradient(
         180deg,
-        $purple 0%,
-        $gradiend-end-purple 100%
+        $primary 0%,
+        $gradiend-end-primary 100%
       );
     }
   }

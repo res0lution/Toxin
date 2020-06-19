@@ -5,7 +5,7 @@
 
   &__apply-button {
     background: none;
-    color: $purple;
+    color: $primary;
     cursor: pointer;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -37,7 +37,7 @@
 
     &_color {
       &_purple {
-        color: $purple;
+        color: $primary;
       }
     }
   }
@@ -81,7 +81,7 @@
       }
 
       &--day-name {
-        color: $purple;
+        color: $primary;
         font-family: "Montserrat", Arial, Helvetica, sans-serif;
         font-size: 0.76rem;
         line-height: 1rem;
@@ -123,8 +123,8 @@
         &.-current- {
           background: linear-gradient(
             180deg,
-            $green 0%,
-            $gradiend-end-green 100%
+            $secondary 0%,
+            $gradiend-end-secondary 100%
           );
           border-radius: 50%;
           color: #fff;
@@ -133,8 +133,8 @@
         &.-selected- {
           background: linear-gradient(
             180deg,
-            $purple 0%,
-            $gradiend-end-purple 100%
+            $primary 0%,
+            $gradiend-end-primary 100%
           );
           border-radius: 50%;
           color: #fff;
@@ -147,8 +147,8 @@
           &::after {
             background: linear-gradient(
               180deg,
-              $purple 0%,
-              $gradiend-end-purple 100%
+              $primary 0%,
+              $gradiend-end-primary 100%
             );
             content: "";
             display: block;
@@ -165,8 +165,8 @@
         &.-range-from-::after {
           background: linear-gradient(
             180deg,
-            $purple 0%,
-            $gradiend-end-purple 100%
+            $primary 0%,
+            $gradiend-end-primary 100%
           );
           border-radius: 50% 0 0 50%;
           content: "";
@@ -183,8 +183,8 @@
         &.-range-to-::after {
           background: linear-gradient(
             180deg,
-            $purple 0%,
-            $gradiend-end-purple 100%
+            $primary 0%,
+            $gradiend-end-primary 100%
           );
           border-radius: 0 50% 50% 0;
           content: "";
@@ -201,8 +201,8 @@
         &:hover {
           background: linear-gradient(
             180deg,
-            $green 0%,
-            $gradiend-end-green 100%
+            $secondary 0%,
+            $gradiend-end-secondary 100%
           );
           border-radius: 50%;
           color: #fff;

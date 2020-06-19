@@ -30,15 +30,15 @@
     &_purple {
       background: linear-gradient(
         180deg,
-        $purple 0%,
-        $gradiend-end-purple 100%
+        $primary 0%,
+        $gradiend-end-secondary 100%
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     &_purple {
-      color: $purple;
+      color: $primary;
     }
 
     &_white {
